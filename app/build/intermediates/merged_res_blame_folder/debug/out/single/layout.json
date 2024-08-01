@@ -1,62 +1,58 @@
 [
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\view_content_empty.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\view_content_empty.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/fragment_home.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_home.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\item_home_view_page_content.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\item_home_view_page_content.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/activity_main.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/activity_main.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\view_loading.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\view_loading.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/fragment_home_view_pager.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_home_view_pager.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\fragment_home_view_pager.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_home_view_pager.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/item_home_view_page_content.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/item_home_view_page_content.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\fragment_home_view_pager_base.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_home_view_pager_base.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/include_home_view_pager_title.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/include_home_view_pager_title.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\view_net_err.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\view_net_err.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/fragment_selected.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_selected.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\activity_main.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\activity_main.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/view_net_err.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/view_net_err.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\fragment_selected.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_selected.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/fragment_home_view_pager_base.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_home_view_pager_base.xml"
     },
     {
-        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-4:/layout/fragment_home_view_pager.xml",
-        "source": "com.yl.newtaobaounion.app-main-7:/layout/fragment_home_view_pager.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/fragment_search.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_search.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\include_home_view_pager_title.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\include_home_view_pager_title.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/fragment_gratia.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_gratia.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\fragment_home_base.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_home_base.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/view_loading.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/view_loading.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\base_layout.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\base_layout.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/fragment_home_base.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_home_base.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\fragment_home.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_home.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/base_layout.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/base_layout.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\fragment_search.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_search.xml"
-    },
-    {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-mergeDebugResources-4:\\layout\\fragment_gratia.xml",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_gratia.xml"
+        "merged": "com.yl.newtaobaounion.app-mergeDebugResources-37:/layout/view_content_empty.xml",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/view_content_empty.xml"
     }
 ]

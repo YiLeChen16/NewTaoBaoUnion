@@ -42,8 +42,13 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
     //创建集合用于保存当前页面的所有Tag的对象
     private var tagList:MutableSet<TextView> = mutableSetOf()
 
+    companion object{
+        //标志第一次加载
+        var firstLaunch:Boolean = true
+    }
+
     // 获取定义在color文件中的颜色
-    private var  orange:Int = ContextCompat.getColor(BaseApplication.getBaseApplicationContext(), com.yl.newtaobaounion.R.color.orange)
+    private var  orange:Int? = 0
 
     override fun loadData() {
 
@@ -56,6 +61,7 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun loadRootViewBinding(container: ViewGroup?): ViewBinding {
+        orange = ContextCompat.getColor(BaseApplication.getBaseApplicationContext(), com.yl.newtaobaounion.R.color.orange)
         val baseLayoutBinding = FragmentHomeViewPagerBaseBinding.inflate(layoutInflater)
         //保存当前页面的分类为页面关键字
         viewKeyWord = categoriesData.word
@@ -83,7 +89,7 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
                         currentTextView?.setTextColor(Color.BLACK)
                     }
                     // 当前 TextView 获得焦点时执行的操作
-                    textView.setTextColor(orange) // 示例：改变文本颜色为橙色
+                    textView.setTextColor(orange!!) // 示例：改变文本颜色为橙色
                     //点击了其他的tag，切换当前页面关键字
                     recommendPresenter.getRecommendDataByKeyWord(viewKeyWord,textView.text.toString(),false)
                     //记录当前点击的tag
@@ -99,7 +105,7 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
             //保留第一个textView,并选中第一个textView
             if (index == 0) {
                 firstTextView = textView
-                textView.setTextColor(orange)
+                textView.setTextColor(orange!!)
             }
             // 创建GridLayout的布局参数
             val params = GridLayout.LayoutParams()
@@ -147,7 +153,7 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
 
     override fun initView() {
         //遍历界面所有textView，将当前选中的tag改变字体颜色
-        currentTextView?.setTextColor(orange)
+        currentTextView?.setTextColor(orange!!)
     }
 
     override fun initPresenter() {
@@ -293,14 +299,19 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
     //当fragment被切换回来后会执行此方法
     //用于记忆用户在当前页面选择的tag
     override fun onResume() {
-        //从SP中获取到当前页面的tag
-        val currentTag =
-            SPUtils.getString(viewKeyWord, firstTextView?.text.toString(), BaseApplication.getBaseApplicationContext())
-        //遍历textView集合
-        for (textView in tagList) {
-            if(textView.text.toString() == currentTag){
-                textView.requestFocus()
+        //不是第一次加载
+        if(!firstLaunch){
+            //从SP中获取到当前页面的tag
+            val currentTag =
+                SPUtils.getString(viewKeyWord, firstTextView?.text.toString(), BaseApplication.getBaseApplicationContext())
+            //遍历textView集合
+            for (textView in tagList) {
+                if(textView.text.toString() == currentTag){
+                    textView.requestFocus()
+                }
             }
+        }else{
+            firstLaunch = false
         }
         super.onResume()
     }

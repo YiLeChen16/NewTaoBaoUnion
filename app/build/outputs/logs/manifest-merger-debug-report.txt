@@ -19,7 +19,6 @@ MERGED from [androidx.loader:loader:1.0.0] D:\Gradle\caches\transforms-3\ad34293
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.0] D:\Gradle\caches\transforms-3\3a304d0ba096be57901359b2af85f896\transformed\lifecycle-viewmodel-2.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0] D:\Gradle\caches\transforms-3\db47076c68b6b8568246bc7b1b6acedc\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.8.0] D:\Gradle\caches\transforms-3\b2b7054cb6179b83be19c75725b6d0e0\transformed\jetified-core-ktx-1.8.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.jakewharton:butterknife:10.2.1] D:\Gradle\caches\transforms-3\b569ead5fe4efb1e973c78769e10ca9c\transformed\jetified-butterknife-10.2.1\AndroidManifest.xml:2:1-7:12
 MERGED from [io.github.scwang90:refresh-layout-kernel:2.1.0] D:\Gradle\caches\transforms-3\3f00dfff850f7c8ee46f715d78fffde8\transformed\jetified-refresh-layout-kernel-2.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.github.scwang90:refresh-header-two-level:2.1.0] D:\Gradle\caches\transforms-3\4bdf8e5c67149744c4d687fb0cc0f65a\transformed\jetified-refresh-header-two-level-2.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.github.scwang90:refresh-header-classics:2.1.0] D:\Gradle\caches\transforms-3\5b9bb709b01df65d09521dab72bdcc58\transformed\jetified-refresh-header-classics-2.1.0\AndroidManifest.xml:2:1-11:12
@@ -36,7 +35,6 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] D:\Gradle\ca
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] D:\Gradle\caches\transforms-3\375f37d29d3e45d7544f4bc7612dcb8b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] D:\Gradle\caches\transforms-3\ffb7cfb2ef02903893bd971d88fca567\transformed\jetified-gifdecoder-4.11.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] D:\Gradle\caches\transforms-3\1142db1fc1d6d44853827ece3176dada\transformed\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.jakewharton:butterknife-runtime:10.2.1] D:\Gradle\caches\transforms-3\3941a5da1cfb283a1467198ad176e286\transformed\jetified-butterknife-runtime-10.2.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] D:\Gradle\caches\transforms-3\ba536794b9d8e9efb32f25f611e78fd4\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.2.0] D:\Gradle\caches\transforms-3\8a0777f78bcfa47490aa03185cd86673\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] D:\Gradle\caches\transforms-3\52d740e8e970387c182bf237433c154a\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -174,8 +172,6 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0] D:\Gradle\
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0] D:\Gradle\caches\transforms-3\db47076c68b6b8568246bc7b1b6acedc\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-ktx:1.8.0] D:\Gradle\caches\transforms-3\b2b7054cb6179b83be19c75725b6d0e0\transformed\jetified-core-ktx-1.8.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.8.0] D:\Gradle\caches\transforms-3\b2b7054cb6179b83be19c75725b6d0e0\transformed\jetified-core-ktx-1.8.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.jakewharton:butterknife:10.2.1] D:\Gradle\caches\transforms-3\b569ead5fe4efb1e973c78769e10ca9c\transformed\jetified-butterknife-10.2.1\AndroidManifest.xml:5:5-44
-MERGED from [com.jakewharton:butterknife:10.2.1] D:\Gradle\caches\transforms-3\b569ead5fe4efb1e973c78769e10ca9c\transformed\jetified-butterknife-10.2.1\AndroidManifest.xml:5:5-44
 MERGED from [io.github.scwang90:refresh-layout-kernel:2.1.0] D:\Gradle\caches\transforms-3\3f00dfff850f7c8ee46f715d78fffde8\transformed\jetified-refresh-layout-kernel-2.1.0\AndroidManifest.xml:7:5-9:41
 MERGED from [io.github.scwang90:refresh-layout-kernel:2.1.0] D:\Gradle\caches\transforms-3\3f00dfff850f7c8ee46f715d78fffde8\transformed\jetified-refresh-layout-kernel-2.1.0\AndroidManifest.xml:7:5-9:41
 MERGED from [io.github.scwang90:refresh-header-two-level:2.1.0] D:\Gradle\caches\transforms-3\4bdf8e5c67149744c4d687fb0cc0f65a\transformed\jetified-refresh-header-two-level-2.1.0\AndroidManifest.xml:7:5-9:41
@@ -208,8 +204,6 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] D:\Gradle\caches\trans
 MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] D:\Gradle\caches\transforms-3\ffb7cfb2ef02903893bd971d88fca567\transformed\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] D:\Gradle\caches\transforms-3\1142db1fc1d6d44853827ece3176dada\transformed\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] D:\Gradle\caches\transforms-3\1142db1fc1d6d44853827ece3176dada\transformed\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.jakewharton:butterknife-runtime:10.2.1] D:\Gradle\caches\transforms-3\3941a5da1cfb283a1467198ad176e286\transformed\jetified-butterknife-runtime-10.2.1\AndroidManifest.xml:5:5-44
-MERGED from [com.jakewharton:butterknife-runtime:10.2.1] D:\Gradle\caches\transforms-3\3941a5da1cfb283a1467198ad176e286\transformed\jetified-butterknife-runtime-10.2.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] D:\Gradle\caches\transforms-3\ba536794b9d8e9efb32f25f611e78fd4\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] D:\Gradle\caches\transforms-3\ba536794b9d8e9efb32f25f611e78fd4\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2:1.2.0] D:\Gradle\caches\transforms-3\8a0777f78bcfa47490aa03185cd86673\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44

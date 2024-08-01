@@ -1,198 +1,194 @@
 [
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-hdpi_loading.png.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-hdpi/loading.png"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_fragment_home_view_pager_base.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_home_view_pager_base.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_view_net_err.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/view_net_err.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_view_net_err.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\view_net_err.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-anydpi-v33/ic_launcher.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-anydpi-v33\\ic_launcher.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_fragment_home_view_pager_base.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_home_view_pager_base.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\xml_backup_rules.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\xml\\backup_rules.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable_ic_launcher.png.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable/ic_launcher.png"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-hdpi_scan_white.png.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-hdpi\\scan_white.png"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_fragment_search.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_search.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-hdpi_search.png.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-hdpi\\search.png"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-hdpi_selected.png.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-hdpi/selected.png"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable_edit_search_box_shape.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable/edit_search_box_shape.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable_ic_launcher.png.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable\\ic_launcher.png"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable_shape_tag_selected.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable/shape_tag_selected.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_base_layout.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\base_layout.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable_shape_item_down_back.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable/shape_item_down_back.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable_shape_item_back.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable\\shape_item_back.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/xml_data_extraction_rules.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_fragment_selected.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_selected.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_item_home_view_page_content.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/item_home_view_page_content.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-hdpi_gratia.png.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-hdpi\\gratia.png"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable_shape_tag_selected.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable\\shape_tag_selected.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/menu_navigation_menu.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/menu/navigation_menu.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-hdpi_home_icon.png.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-hdpi\\home_icon.png"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/xml_backup_rules.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/xml/backup_rules.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_fragment_home.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_home.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_fragment_search.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_search.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_include_home_view_pager_title.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\include_home_view_pager_title.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_fragment_selected.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_selected.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable_shape_item_back.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable/shape_item_back.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable_shape_tag.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable\\shape_tag.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_view_loading.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/view_loading.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\menu_navigation_menu.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\menu\\navigation_menu.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable_shape_tag_normal.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable/shape_tag_normal.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\xml_data_extraction_rules.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\xml\\data_extraction_rules.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable_ic_launcher_background.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_fragment_home_base.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_home_base.xml"
     },
     {
-        "merged": "com.yl.newtaobaounion.app-merged_res-5:/layout_fragment_home_view_pager.xml.flat",
-        "source": "com.yl.newtaobaounion.app-main-7:/layout/fragment_home_view_pager.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable_edit_search_box_shape.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable\\edit_search_box_shape.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-hdpi_home_icon.png.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-hdpi/home_icon.png"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-hdpi_wifi.png.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-hdpi/wifi.png"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_fragment_gratia.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_gratia.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable_selector_tag.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable/selector_tag.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable_shape_home_pager_title_part.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable/shape_home_pager_title_part.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_fragment_home.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_home.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_view_content_empty.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/view_content_empty.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_view_loading.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\view_loading.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_include_home_view_pager_title.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/include_home_view_pager_title.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_view_content_empty.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\view_content_empty.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_activity_main.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/activity_main.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable_shape_tag_normal.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable\\shape_tag_normal.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable_selector_tag.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable\\selector_tag.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable_shape_tag.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable/shape_tag.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_fragment_gratia.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_gratia.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable_shape_home_pager_title_part.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable\\shape_home_pager_title_part.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_base_layout.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/base_layout.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_fragment_home_base.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_home_base.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-hdpi_gratia.png.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-hdpi/gratia.png"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-hdpi_scan_white.png.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-hdpi/scan_white.png"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_item_home_view_page_content.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\item_home_view_page_content.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-hdpi_search.png.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-hdpi/search.png"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_activity_main.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\activity_main.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/layout_fragment_home_view_pager.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/layout/fragment_home_view_pager.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-hdpi_loading.png.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-hdpi\\loading.png"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\drawable_shape_item_down_back.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\drawable\\shape_item_down_back.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\layout_fragment_home_view_pager.xml.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\layout\\fragment_home_view_pager.xml"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-hdpi_wifi.png.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-hdpi\\wifi.png"
-    },
-    {
-        "merged": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-merged_res-5:\\mipmap-hdpi_selected.png.flat",
-        "source": "D:\\Gradle\\daemon\\7.5\\com.yl.newtaobaounion.app-main-7:\\mipmap-hdpi\\selected.png"
+        "merged": "com.yl.newtaobaounion.app-merged_res-38:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.yl.newtaobaounion.app-main-40:/mipmap-mdpi/ic_launcher.webp"
     }
 ]

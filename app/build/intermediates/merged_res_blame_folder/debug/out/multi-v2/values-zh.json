@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.yl.newtaobaounion.app-mergeDebugResources-3:/values-zh/values-zh.xml",
+            "outputFile": "com.yl.newtaobaounion.app-mergeDebugResources-36:/values-zh/values-zh.xml",
             "map": [
                 {
-                    "source": "D:\\Gradle\\caches\\transforms-3\\3f00dfff850f7c8ee46f715d78fffde8\\transformed\\jetified-refresh-layout-kernel-2.1.0\\res\\values-zh\\values-zh.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,163",
-                        "endColumns": "107,91",
-                        "endOffsets": "158,250"
-                    }
-                },
-                {
-                    "source": "D:\\Gradle\\caches\\transforms-3\\5b9bb709b01df65d09521dab72bdcc58\\transformed\\jetified-refresh-header-classics-2.1.0\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\86131\\.gradle\\caches\\transforms-3\\ca479ccd157437a20b51ccba97fc0811\\transformed\\refresh-header-classics-2.1.0\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -31,7 +21,17 @@
                     }
                 },
                 {
-                    "source": "D:\\Gradle\\caches\\transforms-3\\be4886f211a29089f7fb597c3949ad4d\\transformed\\jetified-refresh-footer-classics-2.1.0\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\86131\\.gradle\\caches\\transforms-3\\2ba8c1f69a1abf9fe13ecb4b0f7f30d6\\transformed\\refresh-layout-kernel-2.1.0\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,163",
+                        "endColumns": "107,91",
+                        "endOffsets": "158,250"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\86131\\.gradle\\caches\\transforms-3\\36f0e7c947b712d50632655d72b57109\\transformed\\refresh-footer-classics-2.1.0\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

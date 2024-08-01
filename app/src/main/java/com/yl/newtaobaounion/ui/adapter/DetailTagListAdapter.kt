@@ -44,6 +44,7 @@ class DetailTagListAdapter(val context: Context) :
 
     //加载数据时设置数据
     fun setData(data: List<DetailData>) {
+        this.data.clear()//清空数据
         this.data.addAll(data)
         notifyDataSetChanged()
     }
