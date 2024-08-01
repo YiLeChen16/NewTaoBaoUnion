@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:background="@color/back_grey"
+    android:padding="@dimen/dp_6">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <ImageView
+                android:id="@+id/iv_goods_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_220"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                />
+
+            <TextView
+                android:id="@+id/tv_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:text="天猫"
+                android:background="@drawable/shape_tag"
+                android:textColor="@color/white"
+                android:paddingStart="@dimen/dp_6"
+                android:layout_marginStart="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_6"
+                android:textStyle="bold"
+                android:layout_alignBaseline="@id/tv_title"/>
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="羽绒棉背心女士马夹外穿韩版加厚中长款宽松秋冬网红棉马甲外套潮"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black"
+                android:padding="@dimen/dp_8"
+                android:layout_below="@id/iv_goods_img"
+                android:layout_toEndOf="@id/tv_tag"
+                android:maxLines="2"/>
+            <TextView
+                android:id="@+id/tv_tag_cheap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:text="领券立减15元"
+                android:textStyle="bold"
+                android:background="@drawable/shape_tag"
+                android:textColor="@color/white"
+                android:padding="@dimen/dp_4"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/layout_head"
+            android:padding="@dimen/dp_6"
+            android:background="@drawable/shape_item_down_back"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_price1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="到手价￥"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/red"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_ticket_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="84"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:layout_toEndOf="@id/tv_price1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="原价:"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_toEndOf="@id/tv_ticket_price"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_normal_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/grey"
+                android:layout_toEndOf="@id/tv_price"
+                android:textSize="@dimen/sp_14"
+                android:text="99.99"
+                android:layout_alignBaseline="@id/tv_price"/>
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>
