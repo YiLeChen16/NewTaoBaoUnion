@@ -29,6 +29,8 @@ class MyLoadingView(context: Context, attrs: AttributeSet?) : AppCompatImageView
     }
 
     fun startRotate() {
+        //注册监听BaseFragment的currentState
+
         //开启子线程
         //让加载圈旋转
         post(object : Runnable {
@@ -38,7 +40,8 @@ class MyLoadingView(context: Context, attrs: AttributeSet?) : AppCompatImageView
                 invalidate()
                 LogUtils.d(this@MyLoadingView, "Loading...$mDegrees")
                 //如果当前fragment的状态不是加载状态，则停止旋转
-                if (BaseFragment.getFragmentCurrentState() != BaseFragment.State.LOADING) {
+                if (BaseFragment.getFragmentCurrentState() != BaseFragment.State.LOADING && BaseFragment.getFragmentCurrentState() != BaseFragment.State.NONE) {
+                    LogUtils.d(this@MyLoadingView,"BaseFragment.getFragmentCurrentState()-->${BaseFragment.getFragmentCurrentState()}")
                     //停止旋转
                     removeCallbacks(this)
                     LogUtils.d(this@MyLoadingView, "removeCallbacks...")

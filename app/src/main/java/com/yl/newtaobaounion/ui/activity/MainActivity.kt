@@ -53,20 +53,23 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         //给底部导航栏设置监听
         //与viewPager绑定
         binding.bottomNavigation.setOnItemSelectedListener { item ->
-            LogUtils.d(this,"itemID->${item.itemId}")
+            LogUtils.d(this, "itemID->${item.itemId}")
             when (item.itemId) {
                 R.id.home_item -> {
                     binding.viewPager.currentItem = 0
                     LogUtils.d(this, "home clicked")
                 }
+
                 R.id.selected_item -> {
                     binding.viewPager.currentItem = 1
                     LogUtils.d(this, "selected clicked")
                 }
+
                 R.id.gratia_item -> {
                     binding.viewPager.currentItem = 2
                     LogUtils.d(this, "gratia clicked")
                 }
+
                 R.id.search_item -> {
                     binding.viewPager.currentItem = 3
                     LogUtils.d(this, "search clicked")
@@ -74,9 +77,28 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             }
             true
         }
+        binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                // 在页面被选中时调用
+                when (position) {
+                    0 -> binding.bottomNavigation.selectedItemId = R.id.home_item
+                    1 -> binding.bottomNavigation.selectedItemId = R.id.selected_item
+                    2 -> binding.bottomNavigation.selectedItemId = R.id.gratia_item
+                    3 -> binding.bottomNavigation.selectedItemId = R.id.search_item
+                }
+            }
+        })
     }
 
     override fun initPresenter() {
+
+    }
+
+
+    //定义方法给外界切换到SearchFragment
+    fun switchToSearchFragment() {
+        binding.viewPager.currentItem = 3
 
     }
 

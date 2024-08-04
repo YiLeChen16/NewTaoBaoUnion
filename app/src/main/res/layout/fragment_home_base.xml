@@ -48,6 +48,7 @@
             android:hint="搜索你喜欢的宝贝"
             android:paddingLeft="@dimen/dp_10"
             android:textSize="@dimen/sp_14"
+            android:clickable="true"
             android:editable="false"/>
     </RelativeLayout>
 

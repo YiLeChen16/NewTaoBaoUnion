@@ -9,8 +9,15 @@ import retrofit2.Call
 import retrofit2.Response
 import java.net.HttpURLConnection
 
-class CategoriesPresenter:ICategoriesPresenter {
+class CategoriesPresenter private constructor():ICategoriesPresenter {
     private var onCategoriesDataListener: IonCategoriesDataCallback? = null
+    //提供获取此类对象的方法
+    companion object{
+        private  var categoriesPresenter:CategoriesPresenter = CategoriesPresenter()
+        fun getInstance() :CategoriesPresenter{
+            return categoriesPresenter
+        }
+    }
 
     /**
      * 请求分类数据

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-32:12
 MERGED from [androidx.databinding:viewbinding:7.4.2] D:\Gradle\caches\transforms-3\2e18597a66aca0e73484c23326c8a0e9\transformed\jetified-viewbinding-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.7.0] D:\Gradle\caches\transforms-3\c8b06ae0f825964bb6ee998ff443943d\transformed\material-1.7.0\AndroidManifest.xml:17:1-26:12
 MERGED from [com.github.bumptech.glide:glide:4.11.0] D:\Gradle\caches\transforms-3\8395d83a28d7ef3691d5c86e7779d5dd\transformed\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
@@ -57,22 +57,22 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\Gradle\caches\transforms-
 MERGED from [androidx.interpolator:interpolator:1.0.0] D:\Gradle\caches\transforms-3\a451e6aa662452d7affc319487109940\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] D:\Gradle\caches\transforms-3\c61a945564abef0950607fad719ab14f\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [io.github.scwang90:refresh-drawable-paint:2.1.0] D:\Gradle\caches\transforms-3\9ca760c70431d3422f8b95118e1abfff\transformed\jetified-refresh-drawable-paint-2.1.0\AndroidManifest.xml:2:1-11:12
-INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
 		INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:1-32:12
 		INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:2:11-69
@@ -81,7 +81,7 @@ ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:
 	android:name
 		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:6:5-26:19
+ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:6:5-30:19
 MERGED from [com.google.android.material:material:1.7.0] D:\Gradle\caches\transforms-3\c8b06ae0f825964bb6ee998ff443943d\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.7.0] D:\Gradle\caches\transforms-3\c8b06ae0f825964bb6ee998ff443943d\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
 MERGED from [com.github.bumptech.glide:glide:4.11.0] D:\Gradle\caches\transforms-3\8395d83a28d7ef3691d5c86e7779d5dd\transformed\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
@@ -138,6 +138,12 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
 		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:23:27-74
+activity#com.yl.newtaobaounion.ui.activity.TicketActivity
+ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:26:9-29:20
+	android:exported
+		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml:27:13-55
 uses-sdk
 INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\AndroidStudioCode\NewTaoBaoUnion\app\src\main\AndroidManifest.xml

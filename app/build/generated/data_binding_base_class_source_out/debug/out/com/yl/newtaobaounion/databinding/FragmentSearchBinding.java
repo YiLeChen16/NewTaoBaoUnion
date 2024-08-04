@@ -4,20 +4,74 @@ package com.yl.newtaobaounion.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 import com.yl.newtaobaounion.R;
+import com.yl.newtaobaounion.ui.custom.FlowTextLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentSearchBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private FragmentSearchBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final FlowTextLayout flowTextLayoutHistories;
+
+  @NonNull
+  public final FlowTextLayout flowTextLayoutRecommend;
+
+  @NonNull
+  public final ImageView ivDelete;
+
+  @NonNull
+  public final LinearLayout layout;
+
+  @NonNull
+  public final LinearLayout recommendLayout;
+
+  @NonNull
+  public final SmartRefreshLayout refreshLayout;
+
+  @NonNull
+  public final LinearLayout searchHistoriesLayout;
+
+  @NonNull
+  public final RecyclerView searchResultIst;
+
+  @NonNull
+  public final TextView tvHistoryTitle;
+
+  @NonNull
+  public final TextView tvRecommendTitle;
+
+  private FragmentSearchBinding(@NonNull ConstraintLayout rootView,
+      @NonNull FlowTextLayout flowTextLayoutHistories,
+      @NonNull FlowTextLayout flowTextLayoutRecommend, @NonNull ImageView ivDelete,
+      @NonNull LinearLayout layout, @NonNull LinearLayout recommendLayout,
+      @NonNull SmartRefreshLayout refreshLayout, @NonNull LinearLayout searchHistoriesLayout,
+      @NonNull RecyclerView searchResultIst, @NonNull TextView tvHistoryTitle,
+      @NonNull TextView tvRecommendTitle) {
     this.rootView = rootView;
+    this.flowTextLayoutHistories = flowTextLayoutHistories;
+    this.flowTextLayoutRecommend = flowTextLayoutRecommend;
+    this.ivDelete = ivDelete;
+    this.layout = layout;
+    this.recommendLayout = recommendLayout;
+    this.refreshLayout = refreshLayout;
+    this.searchHistoriesLayout = searchHistoriesLayout;
+    this.searchResultIst = searchResultIst;
+    this.tvHistoryTitle = tvHistoryTitle;
+    this.tvRecommendTitle = tvRecommendTitle;
   }
 
   @Override
@@ -43,10 +97,75 @@ public final class FragmentSearchBinding implements ViewBinding {
 
   @NonNull
   public static FragmentSearchBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.flow_text_layout_histories;
+      FlowTextLayout flowTextLayoutHistories = ViewBindings.findChildViewById(rootView, id);
+      if (flowTextLayoutHistories == null) {
+        break missingId;
+      }
 
-    return new FragmentSearchBinding((ConstraintLayout) rootView);
+      id = R.id.flow_text_layout_recommend;
+      FlowTextLayout flowTextLayoutRecommend = ViewBindings.findChildViewById(rootView, id);
+      if (flowTextLayoutRecommend == null) {
+        break missingId;
+      }
+
+      id = R.id.iv_delete;
+      ImageView ivDelete = ViewBindings.findChildViewById(rootView, id);
+      if (ivDelete == null) {
+        break missingId;
+      }
+
+      id = R.id.layout;
+      LinearLayout layout = ViewBindings.findChildViewById(rootView, id);
+      if (layout == null) {
+        break missingId;
+      }
+
+      id = R.id.recommend_layout;
+      LinearLayout recommendLayout = ViewBindings.findChildViewById(rootView, id);
+      if (recommendLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.refreshLayout;
+      SmartRefreshLayout refreshLayout = ViewBindings.findChildViewById(rootView, id);
+      if (refreshLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.search_histories_layout;
+      LinearLayout searchHistoriesLayout = ViewBindings.findChildViewById(rootView, id);
+      if (searchHistoriesLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.search_result_ist;
+      RecyclerView searchResultIst = ViewBindings.findChildViewById(rootView, id);
+      if (searchResultIst == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_history_title;
+      TextView tvHistoryTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvHistoryTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_recommend_title;
+      TextView tvRecommendTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvRecommendTitle == null) {
+        break missingId;
+      }
+
+      return new FragmentSearchBinding((ConstraintLayout) rootView, flowTextLayoutHistories,
+          flowTextLayoutRecommend, ivDelete, layout, recommendLayout, refreshLayout,
+          searchHistoriesLayout, searchResultIst, tvHistoryTitle, tvRecommendTitle);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

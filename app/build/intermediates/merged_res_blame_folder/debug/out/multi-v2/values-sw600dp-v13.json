@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.yl.newtaobaounion.app-mergeDebugResources-36:/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "outputFile": "com.yl.newtaobaounion.app-mergeDebugResources-3:/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "D:\\AndroidStudioCode\\NewTaoBaoUnion\\app\\src\\main\\res\\values-sw600dp\\dimens.xml",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\86131\\.gradle\\caches\\transforms-3\\70c2ec2a72e5636518d653096ca76054\\transformed\\appcompat-1.5.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
-                    },
-                    "to": {
-                        "startLines": "3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "99,168,237,307,381,457,516,587",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "163,232,302,376,452,511,582,650"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\86131\\.gradle\\caches\\transforms-3\\c8b06ae0f825964bb6ee998ff443943d\\transformed\\material-1.7.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "D:\\Gradle\\caches\\transforms-3\\c8b06ae0f825964bb6ee998ff443943d\\transformed\\material-1.7.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -54,6 +37,23 @@
                         "endLines": "11,12,13,14,15,16,18,19,406,407,437,441",
                         "endColumns": "59,69,70,71,57,57,10,63,55,58,62,10",
                         "endOffsets": "710,780,851,923,981,1039,1148,1212,18070,18129,19406,19578"
+                    }
+                },
+                {
+                    "source": "D:\\Gradle\\caches\\transforms-3\\70c2ec2a72e5636518d653096ca76054\\transformed\\appcompat-1.5.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "99,168,237,307,381,457,516,587",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "163,232,302,376,452,511,582,650"
                     }
                 }
             ]

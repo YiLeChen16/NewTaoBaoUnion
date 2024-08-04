@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.yl.newtaobaounion.app-mergeDebugResources-36:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.yl.newtaobaounion.app-mergeDebugResources-3:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\86131\\.gradle\\caches\\transforms-3\\c8b06ae0f825964bb6ee998ff443943d\\transformed\\material-1.7.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "D:\\Gradle\\caches\\transforms-3\\c8b06ae0f825964bb6ee998ff443943d\\transformed\\material-1.7.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

@@ -7,7 +7,7 @@ open class BaseApplication : Application() {
     companion object {
         private lateinit var context: Context
         //获取context实例
-        open fun getBaseApplicationContext(): Context {
+        open fun getAppContext(): Context {
             return context
         }
     }

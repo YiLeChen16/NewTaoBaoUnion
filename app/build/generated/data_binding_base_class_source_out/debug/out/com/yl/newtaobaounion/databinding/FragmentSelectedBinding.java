@@ -7,17 +7,30 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 import com.yl.newtaobaounion.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class FragmentSelectedBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
 
-  private FragmentSelectedBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final RecyclerView contentList;
+
+  @NonNull
+  public final SmartRefreshLayout refreshLayout;
+
+  private FragmentSelectedBinding(@NonNull ConstraintLayout rootView,
+      @NonNull RecyclerView contentList, @NonNull SmartRefreshLayout refreshLayout) {
     this.rootView = rootView;
+    this.contentList = contentList;
+    this.refreshLayout = refreshLayout;
   }
 
   @Override
@@ -43,10 +56,25 @@ public final class FragmentSelectedBinding implements ViewBinding {
 
   @NonNull
   public static FragmentSelectedBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.content_list;
+      RecyclerView contentList = ViewBindings.findChildViewById(rootView, id);
+      if (contentList == null) {
+        break missingId;
+      }
 
-    return new FragmentSelectedBinding((ConstraintLayout) rootView);
+      id = R.id.refreshLayout;
+      SmartRefreshLayout refreshLayout = ViewBindings.findChildViewById(rootView, id);
+      if (refreshLayout == null) {
+        break missingId;
+      }
+
+      return new FragmentSelectedBinding((ConstraintLayout) rootView, contentList, refreshLayout);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

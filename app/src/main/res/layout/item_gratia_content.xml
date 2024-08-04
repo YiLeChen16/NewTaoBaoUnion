@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_grey"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/dp_6">
+
+    <RelativeLayout
+        android:id="@+id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_goods_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_220"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_goods_img"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="@dimen/dp_8"
+            android:text="羽绒棉背心女士马夹外穿韩版加厚中长款宽松秋冬网红棉马甲外套潮"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_adventage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/shape_tag"
+            android:padding="@dimen/dp_4"
+            android:text="每晚8点9.9元限时抢购"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/layout_head"
+        android:background="@drawable/shape_item_down_back"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_6">
+
+        <TextView
+            android:id="@+id/tv_active_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="2024.1.1-2024.9.10"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="italic" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

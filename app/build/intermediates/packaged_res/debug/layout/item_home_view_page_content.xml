@@ -46,7 +46,7 @@
                 android:layout_toEndOf="@id/tv_tag"
                 android:maxLines="2"/>
             <TextView
-                android:id="@+id/tv_tag_cheap"
+                android:id="@+id/tv_cheap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_12"
@@ -69,7 +69,7 @@
             android:gravity="center_vertical">
 
             <TextView
-                android:id="@+id/tv_price1"
+                android:id="@+id/tv_price"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="到手价￥"
@@ -77,35 +77,35 @@
                 android:textColor="@color/red"
                 android:gravity="center"/>
             <TextView
-                android:id="@+id/tv_ticket_price"
+                android:id="@+id/tv_price1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="84"
                 android:textSize="@dimen/sp_18"
                 android:textStyle="bold"
                 android:textColor="@color/red"
-                android:layout_toEndOf="@id/tv_price1"
+                android:layout_toEndOf="@id/tv_price"
                 android:gravity="center"/>
 
             <TextView
-                android:id="@+id/tv_price"
+                android:id="@+id/tv_end_time"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="原价:"
                 android:textColor="@color/grey"
                 android:textSize="@dimen/sp_14"
                 android:layout_marginStart="@dimen/dp_5"
-                android:layout_toEndOf="@id/tv_ticket_price"
+                android:layout_toEndOf="@id/tv_price1"
                 android:gravity="center"/>
             <TextView
                 android:id="@+id/tv_normal_price"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="@color/grey"
-                android:layout_toEndOf="@id/tv_price"
+                android:layout_toEndOf="@id/tv_end_time"
                 android:textSize="@dimen/sp_14"
                 android:text="99.99"
-                android:layout_alignBaseline="@id/tv_price"/>
+                android:layout_alignBaseline="@id/tv_end_time"/>
         </RelativeLayout>
 
 

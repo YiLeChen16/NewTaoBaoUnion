@@ -23,9 +23,9 @@ import org.w3c.dom.Text
 abstract class BaseFragment : Fragment() {
 
     companion object{
-        var currentState: State? = State.NONE
+        lateinit var currentState: State
         //获取当前加载状态
-        fun getFragmentCurrentState(): State? {
+        fun getFragmentCurrentState(): State {
             return currentState
         }
     }
@@ -204,4 +204,7 @@ abstract class BaseFragment : Fragment() {
         super.onDestroy()
         release()
     }
+
+
+
 }

@@ -2,7 +2,7 @@ package com.yl.newtaobaounion.ui.fragment
 
 import android.graphics.Color
 import android.os.Build
-import android.util.Log
+import android.os.Bundle
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import android.widget.GridLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewbinding.ViewBinding
@@ -31,41 +30,66 @@ import com.yl.newtaobaounion.view.IRecommendDataCallback
 
 
 //首页viewPager的Fragment
-class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment(),
+class HomeViewPagerFragment: BaseFragment(),
     IRecommendDataCallback {
+
+        companion object {
+            //参数传递
+            //使用fragment必须提供一个无参构造，
+            // 因为当Fragment因为某种原因重新创建时，会调用到onCreate方法传入之前保存的状态，
+            // 在instantiate方法中通过反射无参构造函数创建一个Fragment，并且为Arguments初始化为原来保存的值，
+            // 而此时如果没有无参构造函数就会抛出异常，造成程序崩溃。
+            fun newInstance(categoriesData: CategoriesData?): HomeViewPagerFragment {
+                val args = Bundle()
+                args.putParcelable("categoriesData", categoriesData)
+                var fragment = HomeViewPagerFragment()
+                fragment.setArguments(args)
+                return fragment
+            }
+        }
+
+
+
+
     private lateinit var binding: FragmentHomeViewPagerBinding
     var firstTextView: TextView? = null
     var currentTextView: TextView? = null
     private lateinit var recommendPresenter: RecommendPresenter
     private lateinit var viewKeyWord: String
-    private var detailTagListAdapter:DetailTagListAdapter? = null
-    //创建集合用于保存当前页面的所有Tag的对象
-    private var tagList:MutableSet<TextView> = mutableSetOf()
+    private var detailTagListAdapter: DetailTagListAdapter? = null
 
-    companion object{
-        //标志第一次加载
-        var firstLaunch:Boolean = true
-    }
+    //创建集合用于保存当前页面的所有Tag的对象
+    private var tagList: MutableSet<TextView> = mutableSetOf()
+
+    //标志第一次加载
+    var firstLaunch: Boolean = true
 
     // 获取定义在color文件中的颜色
-    private var  orange:Int? = 0
+    private var orange: Int? = 0
 
     override fun loadData() {
 
         //默认加载第一个tag的推荐内容
-        currentTextView = firstTextView
         //SPUtils.putString(viewKeyWord,firstTextView?.text.toString(),BaseApplication.getBaseApplicationContext())
         //将refresh标志为false，表示此次不是刷新的数据
-        recommendPresenter.getRecommendDataByKeyWord(viewKeyWord,firstTextView?.text.toString(),false)
+        recommendPresenter.getRecommendDataByKeyWord(
+            viewKeyWord,
+            firstTextView?.text.toString(),
+            false
+        )
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun loadRootViewBinding(container: ViewGroup?): ViewBinding {
-        orange = ContextCompat.getColor(BaseApplication.getBaseApplicationContext(), com.yl.newtaobaounion.R.color.orange)
+        //获取传递的参数
+        val categoriesData = arguments?.getParcelable<CategoriesData>("categoriesData")
+        orange = ContextCompat.getColor(
+            BaseApplication.getAppContext(),
+            com.yl.newtaobaounion.R.color.orange
+        )
         val baseLayoutBinding = FragmentHomeViewPagerBaseBinding.inflate(layoutInflater)
         //保存当前页面的分类为页面关键字
-        viewKeyWord = categoriesData.word
-//        orange = ContextCompat.getColor(requireContext(), com.yl.newtaobaounion.R.color.orange)
+        viewKeyWord = categoriesData?.word!!
         //设置为四列
         baseLayoutBinding.gridLayout.columnCount = 4
         // 用于存储每行的最大宽度和最大高度
@@ -83,7 +107,10 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
             textView.isFocusableInTouchMode = true
             //设置焦点监听事件
             textView.onFocusChangeListener = OnFocusChangeListener { v, hasFocus ->
-                LogUtils.d(this@HomeViewPagerFragment, "${textView.text.toString()} hasFocus-->$hasFocus")
+                LogUtils.d(
+                    this@HomeViewPagerFragment,
+                    "${textView.text.toString()} hasFocus-->$hasFocus"
+                )
                 if (hasFocus) {
                     if (textView != currentTextView) {
                         currentTextView?.setTextColor(Color.BLACK)
@@ -91,11 +118,20 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
                     // 当前 TextView 获得焦点时执行的操作
                     textView.setTextColor(orange!!) // 示例：改变文本颜色为橙色
                     //点击了其他的tag，切换当前页面关键字
-                    recommendPresenter.getRecommendDataByKeyWord(viewKeyWord,textView.text.toString(),false)
+                    LogUtils.e(this@HomeViewPagerFragment, "${textView.text.toString()} 加载数据")
+                    recommendPresenter.getRecommendDataByKeyWord(
+                        viewKeyWord,
+                        textView.text.toString(),
+                        false
+                    )
                     //记录当前点击的tag
                     currentTextView = textView
                     //将当前点击的tag保存到SP中
-                    SPUtils.putString(viewKeyWord,textView.text.toString(),BaseApplication.getBaseApplicationContext())
+                    SPUtils.putString(
+                        viewKeyWord,
+                        textView.text.toString(),
+                        BaseApplication.getAppContext()
+                    )
                 } else {
                     // 当前 TextView 失去焦点时执行的操作
                     textView.setTextColor(Color.BLACK) // 示例：恢复文本颜色为黑色
@@ -105,6 +141,7 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
             //保留第一个textView,并选中第一个textView
             if (index == 0) {
                 firstTextView = textView
+                currentTextView = firstTextView
                 textView.setTextColor(orange!!)
             }
             // 创建GridLayout的布局参数
@@ -152,8 +189,8 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
     }
 
     override fun initView() {
-        //遍历界面所有textView，将当前选中的tag改变字体颜色
-        currentTextView?.setTextColor(orange!!)
+        /*//遍历界面所有textView，将当前选中的tag改变字体颜色
+        currentTextView?.setTextColor(orange!!)*/
     }
 
     override fun initPresenter() {
@@ -166,27 +203,39 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
         binding.refreshLayout.setOnLoadMoreListener {
             //加载更多条目
             //TODO::
-            LogUtils.d(this@HomeViewPagerFragment,"LoadMore currentTag-->${currentTextView?.text.toString()}")
-            recommendPresenter.loadMoreRecommendDataByKeyWord(viewKeyWord,currentTextView?.text.toString())
+            LogUtils.d(
+                this@HomeViewPagerFragment,
+                "LoadMore currentTag-->${currentTextView?.text.toString()}"
+            )
+            recommendPresenter.loadMoreRecommendDataByKeyWord(
+                viewKeyWord,
+                currentTextView?.text.toString()
+            )
         }
         //为刷新框架设置上拉刷新监听事件
         binding.refreshLayout.setOnRefreshListener {
             //刷新当前页面
-            LogUtils.d(this@HomeViewPagerFragment,"Refresh currentTag-->${currentTextView?.text.toString()}")
-            recommendPresenter.reLoadRecommendDataByKeyWord(viewKeyWord,currentTextView?.text.toString())
+            LogUtils.d(
+                this@HomeViewPagerFragment,
+                "Refresh currentTag-->${currentTextView?.text.toString()}"
+            )
+            recommendPresenter.reLoadRecommendDataByKeyWord(
+                viewKeyWord,
+                currentTextView?.text.toString()
+            )
         }
     }
 
     //点击网络加载错误试图时，触发此方法
     override fun retry() {
-        LogUtils.d(this,"retry")
+        LogUtils.d(this, "retry")
         //重新进行网络请求
         val tag = SPUtils.getString(
             viewKeyWord,
             firstTextView?.text.toString(),
-            BaseApplication.getBaseApplicationContext()
+            BaseApplication.getAppContext()
         )
-        recommendPresenter.getRecommendDataByKeyWord(viewKeyWord,tag!!,false)
+        recommendPresenter.getRecommendDataByKeyWord(viewKeyWord, tag!!, false)
     }
 
     override fun onRecommendDataLoad(recommendBean: RecommendBean) {
@@ -206,7 +255,7 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
      * 加载更多的数据成功
      */
     override fun onMoreDataLoadSuccess(recommendBean: RecommendBean) {
-        LogUtils.d(this,"onMoreDataLoadSuccess-->$recommendBean")
+        LogUtils.d(this, "onMoreDataLoadSuccess-->$recommendBean")
         //停止下拉刷新
         binding.refreshLayout.finishLoadMore()
         //设置数据
@@ -219,27 +268,27 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
      * 加载更多数据失败
      */
     override fun onMoreDataLoadError() {
-        LogUtils.d(this,"onMoreDataLoadError--")
+        LogUtils.d(this, "onMoreDataLoadError--")
         //停止下拉刷新
         binding.refreshLayout.finishLoadMore()
-        ToastUtils.showToast("加载失败，请稍后再试~")
+        ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
     }
 
     /**
      * 加载更多数据为空
      */
     override fun onMoreDataLoadEmpty() {
-        LogUtils.d(this,"onMoreDataLoadEmpty--")
+        LogUtils.d(this, "onMoreDataLoadEmpty--")
         //停止下拉刷新
         binding.refreshLayout.finishLoadMore()
-        ToastUtils.showToast("没有更多宝贝了呢~")
+        ToastUtils.showToast("已到达宇宙的尽头~")
     }
 
     /**
      * 刷新数据成功
      */
     override fun onRefreshDataLoadSuccess(recommendBean: RecommendBean) {
-        LogUtils.d(this,"onRefreshDataLoadSuccess-->$recommendBean")
+        LogUtils.d(this, "onRefreshDataLoadSuccess-->$recommendBean")
         //停止刷新加载
         binding.refreshLayout.finishRefresh()
         //TODO::设置数据
@@ -251,24 +300,24 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
      * 刷新数据失败
      */
     override fun onRefreshDataLoadError() {
-        LogUtils.d(this,"onRefreshDataLoadError--")
+        LogUtils.d(this, "onRefreshDataLoadError--")
         //停止刷新加载
         binding.refreshLayout.finishRefresh()
         //TODO::
         //提示用户刷新失败，并保留当前加载的数据
-        ToastUtils.showToast("刷新失败，请稍后重试~")
+        ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
     }
 
     /**
      * 刷新数据为空
      */
     override fun onRefreshDataLoadEmpty() {
-        LogUtils.d(this,"onRefreshDataLoadEmpty--")
+        LogUtils.d(this, "onRefreshDataLoadEmpty--")
         //停止刷新加载
         binding.refreshLayout.finishRefresh()
         //TODO::
         //提示用户刷新数据为空，并保留当前加载的数据
-        ToastUtils.showToast("刷新数据为空，请稍后重试~")
+        ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
     }
 
     /**
@@ -300,17 +349,23 @@ class HomeViewPagerFragment(val categoriesData: CategoriesData) : BaseFragment()
     //用于记忆用户在当前页面选择的tag
     override fun onResume() {
         //不是第一次加载
-        if(!firstLaunch){
+        if (!firstLaunch) {
+            LogUtils.d(this, "onResume-->重新回到界面")
             //从SP中获取到当前页面的tag
             val currentTag =
-                SPUtils.getString(viewKeyWord, firstTextView?.text.toString(), BaseApplication.getBaseApplicationContext())
+                SPUtils.getString(
+                    viewKeyWord,
+                    firstTextView?.text.toString(),
+                    BaseApplication.getAppContext()
+                )
             //遍历textView集合
             for (textView in tagList) {
-                if(textView.text.toString() == currentTag){
+                if (textView.text.toString() == currentTag) {
                     textView.requestFocus()
                 }
             }
-        }else{
+        } else {
+            LogUtils.d(this, "onResume-->第一次加载到界面")
             firstLaunch = false
         }
         super.onResume()

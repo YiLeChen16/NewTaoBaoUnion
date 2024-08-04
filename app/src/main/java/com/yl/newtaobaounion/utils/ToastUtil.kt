@@ -11,7 +11,7 @@ object ToastUtils {
         //确保唯一单例,避免重复创建Toast对象，导致Toast长时间不消失
         if (toast == null) {
             toast = Toast.makeText(
-                BaseApplication.getBaseApplicationContext(), tips, Toast.LENGTH_SHORT
+                BaseApplication.getAppContext(), tips, Toast.LENGTH_SHORT
             )
         } else {
             toast!!.setText(tips)

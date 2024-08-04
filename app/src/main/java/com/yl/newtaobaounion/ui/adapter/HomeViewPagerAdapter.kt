@@ -27,7 +27,7 @@ class HomeViewPagerAdapter(fragment:HomeFragment) :FragmentStateAdapter(fragment
         categories.forEachIndexed { index, it ->
             //根据请求的数据量，动态创建Fragment
             LogUtils.d(this,"setData-->$it")
-            fragmentList.add(HomeViewPagerFragment(it))
+            fragmentList.add(HomeViewPagerFragment.newInstance(it))
         }
         //刷新数据
         notifyItemRangeChanged(0,fragmentList.size)

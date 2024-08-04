@@ -430,7 +430,7 @@
     <dimen name="sp_7">7sp</dimen>
     <dimen name="sp_8">8sp</dimen>
     <dimen name="sp_9">9sp</dimen>
-    <string name="app_name">领券联盟</string>
+    <string name="app_name">新领券联盟</string>
     <string name="empty">暂无内容哦~</string>
     <string name="error">网络加载错误，请点击重试...</string>
     <string name="gratia">特惠</string>
@@ -439,6 +439,7 @@
     <string name="search">搜索</string>
     <string name="search_hint">搜索你喜欢的宝贝</string>
     <string name="selected">精选</string>
+    <string name="ticket">淘口令</string>
     <style name="Theme.NewTaoBaoUnion" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         
         <item name="colorPrimary">@color/orange</item>
@@ -452,4 +453,8 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         
     </style>
+    <declare-styleable name="FlowTextLayoutStyle">
+        <attr format="dimension" name="horizontal_space"/>
+        <attr format="dimension" name="vertical_space"/>
+    </declare-styleable>
 </resources>

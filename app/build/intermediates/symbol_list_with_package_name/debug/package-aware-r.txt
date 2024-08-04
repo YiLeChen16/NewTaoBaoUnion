@@ -561,6 +561,7 @@ attr homeAsUpIndicator
 attr homeLayout
 attr horizontalOffset
 attr horizontalOffsetWithText
+attr horizontal_space
 attr hoveredFocusedTranslationZ
 attr icon
 attr iconEndPadding
@@ -1282,6 +1283,7 @@ attr useMaterialThemeColors
 attr values
 attr verticalOffset
 attr verticalOffsetWithText
+attr vertical_space
 attr viewInflaterClass
 attr viewTransitionMode
 attr viewTransitionOnCross
@@ -3139,7 +3141,10 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable selector_button
 drawable selector_tag
+drawable shap_ticket_code_box
+drawable shape_flow_text
 drawable shape_home_pager_title_part
 drawable shape_item_back
 drawable shape_item_down_back
@@ -3283,6 +3288,7 @@ id constraint
 id container
 id content
 id contentPanel
+id content_list
 id contiguous
 id continuousVelocity
 id coordinator
@@ -3350,6 +3356,9 @@ id fitXY
 id fixed
 id flip
 id floating
+id flow_text_layout_histories
+id flow_text_layout_recommend
+id flow_text_view
 id forever
 id fragment_container_view_tag
 id frost
@@ -3390,6 +3399,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id iv_delete
 id iv_goods_img
 id iv_scan
 id iv_wifi
@@ -3509,6 +3519,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id recommend_layout
 id rectangles
 id refreshLayout
 id relativeLayout
@@ -3535,9 +3546,11 @@ id search_button
 id search_close_btn
 id search_edit_frame
 id search_go_btn
+id search_histories_layout
 id search_item
 id search_mag_icon
 id search_plate
+id search_result_ist
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
@@ -3637,15 +3650,20 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_active_time
+id tv_adventage
 id tv_app_name
+id tv_cheap
 id tv_empty_describe
+id tv_end_time
+id tv_history_title
 id tv_home_pager_title
 id tv_normal_price
 id tv_price
 id tv_price1
+id tv_recommend_title
+id tv_search_or_cancel_search
 id tv_tag
-id tv_tag_cheap
-id tv_ticket_price
 id tv_title
 id unchecked
 id uniform
@@ -3662,6 +3680,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id web_view
 id west
 id withText
 id with_icon
@@ -3794,6 +3813,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_ticket
 layout base_layout
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3811,14 +3831,19 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout flow_text_view
 layout fragment_gratia
+layout fragment_gratia_base
 layout fragment_home
 layout fragment_home_base
 layout fragment_home_view_pager
 layout fragment_home_view_pager_base
 layout fragment_search
+layout fragment_search_base
 layout fragment_selected
+layout fragment_selected_base
 layout include_home_view_pager_title
+layout item_gratia_content
 layout item_home_view_page_content
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3884,6 +3909,8 @@ layout view_content_empty
 layout view_loading
 layout view_net_err
 menu navigation_menu
+mipmap back
+mipmap delete_icon
 mipmap gratia
 mipmap home_icon
 mipmap ic_launcher
@@ -4061,6 +4088,7 @@ string srl_header_release
 string srl_header_secondary
 string srl_header_update
 string status_bar_notification_info_overflow
+string ticket
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -5171,6 +5199,7 @@ styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavio
 styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing
+styleable FlowTextLayoutStyle horizontal_space vertical_space
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding

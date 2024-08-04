@@ -27,6 +27,12 @@ public final class ItemHomeViewPageContentBinding implements ViewBinding {
   public final RelativeLayout layoutHead;
 
   @NonNull
+  public final TextView tvCheap;
+
+  @NonNull
+  public final TextView tvEndTime;
+
+  @NonNull
   public final TextView tvNormalPrice;
 
   @NonNull
@@ -39,28 +45,21 @@ public final class ItemHomeViewPageContentBinding implements ViewBinding {
   public final TextView tvTag;
 
   @NonNull
-  public final TextView tvTagCheap;
-
-  @NonNull
-  public final TextView tvTicketPrice;
-
-  @NonNull
   public final TextView tvTitle;
 
   private ItemHomeViewPageContentBinding(@NonNull RelativeLayout rootView,
-      @NonNull ImageView ivGoodsImg, @NonNull RelativeLayout layoutHead,
-      @NonNull TextView tvNormalPrice, @NonNull TextView tvPrice, @NonNull TextView tvPrice1,
-      @NonNull TextView tvTag, @NonNull TextView tvTagCheap, @NonNull TextView tvTicketPrice,
-      @NonNull TextView tvTitle) {
+      @NonNull ImageView ivGoodsImg, @NonNull RelativeLayout layoutHead, @NonNull TextView tvCheap,
+      @NonNull TextView tvEndTime, @NonNull TextView tvNormalPrice, @NonNull TextView tvPrice,
+      @NonNull TextView tvPrice1, @NonNull TextView tvTag, @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.ivGoodsImg = ivGoodsImg;
     this.layoutHead = layoutHead;
+    this.tvCheap = tvCheap;
+    this.tvEndTime = tvEndTime;
     this.tvNormalPrice = tvNormalPrice;
     this.tvPrice = tvPrice;
     this.tvPrice1 = tvPrice1;
     this.tvTag = tvTag;
-    this.tvTagCheap = tvTagCheap;
-    this.tvTicketPrice = tvTicketPrice;
     this.tvTitle = tvTitle;
   }
 
@@ -103,6 +102,18 @@ public final class ItemHomeViewPageContentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tv_cheap;
+      TextView tvCheap = ViewBindings.findChildViewById(rootView, id);
+      if (tvCheap == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_end_time;
+      TextView tvEndTime = ViewBindings.findChildViewById(rootView, id);
+      if (tvEndTime == null) {
+        break missingId;
+      }
+
       id = R.id.tv_normal_price;
       TextView tvNormalPrice = ViewBindings.findChildViewById(rootView, id);
       if (tvNormalPrice == null) {
@@ -127,18 +138,6 @@ public final class ItemHomeViewPageContentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tv_tag_cheap;
-      TextView tvTagCheap = ViewBindings.findChildViewById(rootView, id);
-      if (tvTagCheap == null) {
-        break missingId;
-      }
-
-      id = R.id.tv_ticket_price;
-      TextView tvTicketPrice = ViewBindings.findChildViewById(rootView, id);
-      if (tvTicketPrice == null) {
-        break missingId;
-      }
-
       id = R.id.tv_title;
       TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
       if (tvTitle == null) {
@@ -146,7 +145,7 @@ public final class ItemHomeViewPageContentBinding implements ViewBinding {
       }
 
       return new ItemHomeViewPageContentBinding((RelativeLayout) rootView, ivGoodsImg, layoutHead,
-          tvNormalPrice, tvPrice, tvPrice1, tvTag, tvTagCheap, tvTicketPrice, tvTitle);
+          tvCheap, tvEndTime, tvNormalPrice, tvPrice, tvPrice1, tvTag, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
