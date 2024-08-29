@@ -1,8 +1,7 @@
-package com.yl.newtaobaounion.moudle
+package com.yl.newtaobaounion.model.dataBean
 
 import android.os.Parcel
 import android.os.Parcelable
-import java.io.Serializable
 
 data class CategoriesBean(
     val code: Int,

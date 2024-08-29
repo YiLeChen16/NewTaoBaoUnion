@@ -6,7 +6,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.yl.newtaobaounion.base.BaseFragment
 import com.yl.newtaobaounion.databinding.FragmentHomeBaseBinding
 import com.yl.newtaobaounion.databinding.FragmentHomeBinding
-import com.yl.newtaobaounion.moudle.CategoriesBean
+import com.yl.newtaobaounion.model.dataBean.CategoriesBean
 import com.yl.newtaobaounion.presenter.impl.CategoriesPresenter
 import com.yl.newtaobaounion.ui.activity.MainActivity
 import com.yl.newtaobaounion.ui.adapter.HomeViewPagerAdapter

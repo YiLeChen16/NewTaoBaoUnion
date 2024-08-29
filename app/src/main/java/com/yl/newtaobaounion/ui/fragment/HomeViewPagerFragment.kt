@@ -18,8 +18,8 @@ import com.yl.newtaobaounion.base.BaseApplication
 import com.yl.newtaobaounion.base.BaseFragment
 import com.yl.newtaobaounion.databinding.FragmentHomeViewPagerBaseBinding
 import com.yl.newtaobaounion.databinding.FragmentHomeViewPagerBinding
-import com.yl.newtaobaounion.moudle.CategoriesData
-import com.yl.newtaobaounion.moudle.RecommendBean
+import com.yl.newtaobaounion.model.dataBean.CategoriesData
+import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.presenter.impl.RecommendPresenter
 import com.yl.newtaobaounion.ui.adapter.DetailTagListAdapter
 import com.yl.newtaobaounion.utils.LogUtils

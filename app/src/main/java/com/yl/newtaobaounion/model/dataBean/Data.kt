@@ -1,4 +1,4 @@
-package com.yl.newtaobaounion.moudle
+package com.yl.newtaobaounion.model.dataBean
 
 data class Data(
     val currentPage: Int,

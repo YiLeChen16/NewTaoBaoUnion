@@ -1,7 +1,7 @@
 package com.yl.newtaobaounion.presenter.impl
 
 import com.yl.newtaobaounion.https.RetrofitCreator
-import com.yl.newtaobaounion.moudle.SelectedBean
+import com.yl.newtaobaounion.model.dataBean.SelectedBean
 import com.yl.newtaobaounion.presenter.ISelectedPresenter
 import com.yl.newtaobaounion.utils.LogUtils
 import com.yl.newtaobaounion.view.ISelectedDataCallback
@@ -25,8 +25,7 @@ class SelectedPresenter private constructor():ISelectedPresenter {
 
     override fun getSelectedData() {
         callback?.onLoading()
-        val retrofit = RetrofitCreator.getInstance()?.getRetrofit()
-        val interfaceObject = RetrofitCreator.getInterfaceObject(retrofit)
+        val interfaceObject = RetrofitCreator.getApiInterface()
         val task = interfaceObject?.getSelectedGoods(DEFAULT_PAGE.toString())/* 默认加载第一页 */
         task?.enqueue(object :retrofit2.Callback<SelectedBean>{
             override fun onResponse(call: Call<SelectedBean>, response: Response<SelectedBean>) {
@@ -56,8 +55,7 @@ class SelectedPresenter private constructor():ISelectedPresenter {
     override fun getMoreSelectedData() {
         //当前页码数+1
         currentPage++
-        val retrofit = RetrofitCreator.getInstance()?.getRetrofit()
-        val interfaceObject = RetrofitCreator.getInterfaceObject(retrofit)
+        val interfaceObject = RetrofitCreator.getApiInterface()
         val task = interfaceObject?.getSelectedGoods(currentPage.toString())
         task?.enqueue(object :retrofit2.Callback<SelectedBean>{
             override fun onResponse(call: Call<SelectedBean>, response: Response<SelectedBean>) {

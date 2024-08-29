@@ -1,7 +1,7 @@
 package com.yl.newtaobaounion.view
 
 import com.yl.newtaobaounion.base.IBaseViewCallback
-import com.yl.newtaobaounion.moudle.RecommendBean
+import com.yl.newtaobaounion.model.dataBean.RecommendBean
 
 //推荐数据view层回调接口
 interface IRecommendDataCallback:IBaseViewCallback {

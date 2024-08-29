@@ -1,9 +1,9 @@
 package com.yl.newtaobaounion.presenter.impl
 
 import com.yl.newtaobaounion.https.RetrofitCreator
-import com.yl.newtaobaounion.moudle.Histories
-import com.yl.newtaobaounion.moudle.HotKeyBean
-import com.yl.newtaobaounion.moudle.RecommendBean
+import com.yl.newtaobaounion.model.dataBean.Histories
+import com.yl.newtaobaounion.model.dataBean.HotKeyBean
+import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.presenter.ISearchPresenter
 import com.yl.newtaobaounion.utils.JSONCacheUtils
 import com.yl.newtaobaounion.utils.LogUtils
@@ -39,8 +39,7 @@ class SearchPresenter:ISearchPresenter {
 
     override fun getHotkey() {
         callback?.onLoading()
-        val retrofit = RetrofitCreator.getInstance()?.getRetrofit()
-        val apiInterface = RetrofitCreator.getInterfaceObject(retrofit)
+        val apiInterface = RetrofitCreator.getApiInterface()
         val task = apiInterface?.getHotKey()
         task?.enqueue(object :Callback<HotKeyBean>{
             override fun onResponse(call: Call<HotKeyBean>, response: Response<HotKeyBean>) {
@@ -70,8 +69,7 @@ class SearchPresenter:ISearchPresenter {
             //保存搜索历史记录
             saveHistory(keyword)
         }
-        val retrofit = RetrofitCreator.getInstance()?.getRetrofit()
-        val apiInterface = RetrofitCreator.getInterfaceObject(retrofit)
+        val apiInterface = RetrofitCreator.getApiInterface()
         val task =
             apiInterface?.getRecommendedByKeyword(DEFAULT_PAGE.toString(),keyword)
         task?.enqueue(object :Callback<RecommendBean>{
@@ -158,8 +156,7 @@ class SearchPresenter:ISearchPresenter {
 
     //加载更多数据
     override fun onLoadMoreData(keyword: String) {
-        val retrofit = RetrofitCreator.getInstance()?.getRetrofit()
-        val apiInterface = RetrofitCreator.getInterfaceObject(retrofit)
+        val apiInterface = RetrofitCreator.getApiInterface()
         currentPage++
         val task =
             apiInterface?.getRecommendedByKeyword(currentPage.toString(), keyword)

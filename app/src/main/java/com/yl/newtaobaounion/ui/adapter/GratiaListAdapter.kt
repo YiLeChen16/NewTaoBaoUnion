@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.yl.newtaobaounion.R
 import com.yl.newtaobaounion.base.BaseApplication
-import com.yl.newtaobaounion.moudle.DataX
-import com.yl.newtaobaounion.moudle.GratiaData
+import com.yl.newtaobaounion.model.dataBean.DataX
+import com.yl.newtaobaounion.model.dataBean.GratiaData
 import java.text.SimpleDateFormat
 
 class GratiaListAdapter : RecyclerView.Adapter<GratiaListAdapter.MyViewHolder>() {

@@ -1,7 +1,7 @@
 package com.yl.newtaobaounion.view
 
 import com.yl.newtaobaounion.base.IBaseViewCallback
-import com.yl.newtaobaounion.moudle.GratiaBean
+import com.yl.newtaobaounion.model.dataBean.GratiaBean
 
 interface IGratiaDataCallback:IBaseViewCallback {
 

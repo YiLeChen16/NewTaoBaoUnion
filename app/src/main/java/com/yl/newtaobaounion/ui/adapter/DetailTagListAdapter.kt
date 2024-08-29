@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.yl.newtaobaounion.R
 import com.yl.newtaobaounion.R.id.iv_goods_img
-import com.yl.newtaobaounion.moudle.DetailData
+import com.yl.newtaobaounion.model.dataBean.DetailData
 import com.yl.newtaobaounion.ui.activity.TicketActivity
 
 

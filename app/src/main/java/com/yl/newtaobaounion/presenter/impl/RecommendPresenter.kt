@@ -1,7 +1,7 @@
 package com.yl.newtaobaounion.presenter.impl
 
 import com.yl.newtaobaounion.https.RetrofitCreator
-import com.yl.newtaobaounion.moudle.RecommendBean
+import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.presenter.IRecommendPresenter
 import com.yl.newtaobaounion.utils.LogUtils
 import com.yl.newtaobaounion.view.IRecommendDataCallback
@@ -35,8 +35,7 @@ class RecommendPresenter private constructor():IRecommendPresenter {
             onDataLoadingByViewKeyword(viewKeyword)
         }
         //callback?.onLoading()
-        val retrofit = RetrofitCreator.getInstance()?.getRetrofit()
-        val apiInterface = RetrofitCreator.getInterfaceObject(retrofit)
+        val apiInterface = RetrofitCreator.getApiInterface()
         //默认加载第一页的数据
         val task = apiInterface?.getRecommendedByKeyword(DEFAULT_PAGE.toString(),keyword)
         task?.enqueue(object : Callback<RecommendBean>{
@@ -90,8 +89,7 @@ class RecommendPresenter private constructor():IRecommendPresenter {
         viewListInfo[Pair(viewKeyword, keyword)] = currentPage
         LogUtils.d(this,"currentPage-->$currentPage")
         //请求数据
-        val retrofit = RetrofitCreator.getInstance()?.getRetrofit()
-        val apiInterface = RetrofitCreator.getInterfaceObject(retrofit)
+        val apiInterface = RetrofitCreator.getApiInterface()
         val task =
             apiInterface?.getRecommendedByKeyword(currentPage.toString(), keyword)
         task?.enqueue(object :Callback<RecommendBean>{

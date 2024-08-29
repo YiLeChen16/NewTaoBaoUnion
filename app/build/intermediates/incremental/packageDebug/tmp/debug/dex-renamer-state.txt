@@ -1,4 +1,4 @@
-#Sun Aug 04 16:25:52 CST 2024
+#Thu Aug 29 10:47:42 CST 2024
 base.0=D\:\\AndroidStudioCode\\NewTaoBaoUnion\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\AndroidStudioCode\\NewTaoBaoUnion\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=D\:\\AndroidStudioCode\\NewTaoBaoUnion\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
@@ -10,7 +10,7 @@ base.5=D\:\\AndroidStudioCode\\NewTaoBaoUnion\\app\\build\\intermediates\\dex\\d
 base.6=D\:\\AndroidStudioCode\\NewTaoBaoUnion\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
 base.7=D\:\\AndroidStudioCode\\NewTaoBaoUnion\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
 base.8=D\:\\AndroidStudioCode\\NewTaoBaoUnion\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.9=D\:\\AndroidStudioCode\\NewTaoBaoUnion\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.9=D\:\\AndroidStudioCode\\NewTaoBaoUnion\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=8/classes.dex
@@ -22,7 +22,7 @@ path.5=15/classes.dex
 path.6=2/classes.dex
 path.7=3/classes.dex
 path.8=5/classes.dex
-path.9=7/classes.dex
+path.9=14/classes.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.10=classes11.dex

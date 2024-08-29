@@ -16,7 +16,7 @@ private constructor() {
         private var sRetrofitCreator: RetrofitCreator? = null
 
         //对外提供获取RetrofitCreator单例的方法，使用synchronized保证单一实例，避免多个地方同时调用时重复创建单例
-        fun getInstance(): RetrofitCreator? {
+        private fun getInstance(): RetrofitCreator? {
             if (sRetrofitCreator == null) {
                 synchronized(RetrofitCreator::class.java) {
                     if (sRetrofitCreator == null) {
@@ -28,10 +28,16 @@ private constructor() {
         }
 
         //获取接口对象
-        fun getInterfaceObject(retrofit: Retrofit?): ApiInterface? {
+        private fun getInterfaceObject(retrofit: Retrofit?): ApiInterface? {
             return retrofit?.create(ApiInterface::class.java)
         }
+
+        fun getApiInterface():ApiInterface?{
+            val retrofit = getInstance()?.getRetrofit()
+            return getInterfaceObject(retrofit)
+        }
     }
+
 
     //声明Retrofit对象
     private var mRetrofit: Retrofit? = null

@@ -1,12 +1,11 @@
 package com.yl.newtaobaounion.https
 
-import com.yl.newtaobaounion.moudle.CategoriesBean
-import com.yl.newtaobaounion.moudle.GratiaBean
-import com.yl.newtaobaounion.moudle.HotKeyBean
-import com.yl.newtaobaounion.moudle.RecommendBean
-import com.yl.newtaobaounion.moudle.SelectedBean
+import com.yl.newtaobaounion.model.dataBean.CategoriesBean
+import com.yl.newtaobaounion.model.dataBean.GratiaBean
+import com.yl.newtaobaounion.model.dataBean.HotKeyBean
+import com.yl.newtaobaounion.model.dataBean.RecommendBean
+import com.yl.newtaobaounion.model.dataBean.SelectedBean
 import retrofit2.Call
-import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

@@ -1,20 +1,16 @@
 package com.yl.newtaobaounion.ui.fragment
 
-import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewbinding.ViewBinding
-import com.yl.newtaobaounion.R
 import com.yl.newtaobaounion.base.BaseFragment
-import com.yl.newtaobaounion.databinding.BaseLayoutBinding
 import com.yl.newtaobaounion.databinding.FragmentGratiaBaseBinding
 import com.yl.newtaobaounion.databinding.FragmentGratiaBinding
-import com.yl.newtaobaounion.moudle.GratiaBean
+import com.yl.newtaobaounion.model.dataBean.GratiaBean
 import com.yl.newtaobaounion.presenter.impl.GratiaPresenter
 import com.yl.newtaobaounion.ui.adapter.GratiaListAdapter
 import com.yl.newtaobaounion.utils.PresenterManager
 import com.yl.newtaobaounion.view.IGratiaDataCallback
-import java.lang.reflect.ParameterizedType
 
 class GratiaFragment:BaseFragment(), IGratiaDataCallback {
     private lateinit var binding:FragmentGratiaBinding

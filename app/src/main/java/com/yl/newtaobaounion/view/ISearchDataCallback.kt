@@ -1,8 +1,8 @@
 package com.yl.newtaobaounion.view
 
 import com.yl.newtaobaounion.base.IBaseViewCallback
-import com.yl.newtaobaounion.moudle.HotKeyBean
-import com.yl.newtaobaounion.moudle.RecommendBean
+import com.yl.newtaobaounion.model.dataBean.HotKeyBean
+import com.yl.newtaobaounion.model.dataBean.RecommendBean
 
 interface ISearchDataCallback:IBaseViewCallback {
 

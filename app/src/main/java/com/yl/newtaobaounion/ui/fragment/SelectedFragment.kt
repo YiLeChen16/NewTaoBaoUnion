@@ -6,7 +6,7 @@ import androidx.viewbinding.ViewBinding
 import com.yl.newtaobaounion.base.BaseFragment
 import com.yl.newtaobaounion.databinding.FragmentSelectedBaseBinding
 import com.yl.newtaobaounion.databinding.FragmentSelectedBinding
-import com.yl.newtaobaounion.moudle.SelectedBean
+import com.yl.newtaobaounion.model.dataBean.SelectedBean
 import com.yl.newtaobaounion.presenter.impl.SelectedPresenter
 import com.yl.newtaobaounion.ui.adapter.DetailTagListAdapter
 import com.yl.newtaobaounion.utils.PresenterManager

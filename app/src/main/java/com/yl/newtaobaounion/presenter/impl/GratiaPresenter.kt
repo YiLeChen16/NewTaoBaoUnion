@@ -1,7 +1,7 @@
 package com.yl.newtaobaounion.presenter.impl
 
 import com.yl.newtaobaounion.https.RetrofitCreator
-import com.yl.newtaobaounion.moudle.GratiaBean
+import com.yl.newtaobaounion.model.dataBean.GratiaBean
 import com.yl.newtaobaounion.presenter.IGratiaPresenter
 import com.yl.newtaobaounion.view.IGratiaDataCallback
 import retrofit2.Call
@@ -22,8 +22,7 @@ class GratiaPresenter private constructor():IGratiaPresenter {
 
     override fun getGratia() {
         callback?.onLoading()
-        val retrofit = RetrofitCreator.getInstance()?.getRetrofit()
-        val apiInterface = RetrofitCreator.getInterfaceObject(retrofit)
+        val apiInterface = RetrofitCreator.getApiInterface()
         val task = apiInterface?.getGratiaData()
         task?.enqueue(object :Callback<GratiaBean>{
             override fun onResponse(call: Call<GratiaBean>, response: Response<GratiaBean>) {

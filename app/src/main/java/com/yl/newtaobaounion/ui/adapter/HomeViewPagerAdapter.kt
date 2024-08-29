@@ -1,10 +1,8 @@
 package com.yl.newtaobaounion.ui.adapter
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.yl.newtaobaounion.moudle.CategoriesBean
-import com.yl.newtaobaounion.moudle.CategoriesData
+import com.yl.newtaobaounion.model.dataBean.CategoriesData
 import com.yl.newtaobaounion.ui.fragment.HomeFragment
 import com.yl.newtaobaounion.ui.fragment.HomeViewPagerFragment
 import com.yl.newtaobaounion.utils.LogUtils

@@ -10,8 +10,8 @@ import androidx.viewbinding.ViewBinding
 import com.yl.newtaobaounion.base.BaseFragment
 import com.yl.newtaobaounion.databinding.FragmentSearchBaseBinding
 import com.yl.newtaobaounion.databinding.FragmentSearchBinding
-import com.yl.newtaobaounion.moudle.HotKeyBean
-import com.yl.newtaobaounion.moudle.RecommendBean
+import com.yl.newtaobaounion.model.dataBean.HotKeyBean
+import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.presenter.impl.SearchPresenter
 import com.yl.newtaobaounion.ui.adapter.DetailTagListAdapter
 import com.yl.newtaobaounion.ui.custom.FlowTextLayout
