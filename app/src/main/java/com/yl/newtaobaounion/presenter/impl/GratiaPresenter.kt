@@ -1,51 +1,36 @@
 package com.yl.newtaobaounion.presenter.impl
 
-import com.yl.newtaobaounion.https.RetrofitCreator
-import com.yl.newtaobaounion.model.dataBean.GratiaBean
+import com.yl.newtaobaounion.model.GratiaModel
 import com.yl.newtaobaounion.presenter.IGratiaPresenter
 import com.yl.newtaobaounion.view.IGratiaDataCallback
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import java.net.HttpURLConnection
 
-class GratiaPresenter private constructor():IGratiaPresenter {
+class GratiaPresenter private constructor() : IGratiaPresenter {
     //提供获取此类对象的方法
-    companion object{
-        private  var gratiaPresenter:GratiaPresenter = GratiaPresenter()
-        fun getInstance() :GratiaPresenter{
+    companion object {
+        private var gratiaPresenter: GratiaPresenter = GratiaPresenter()
+        fun getInstance(): GratiaPresenter {
             return gratiaPresenter
         }
     }
 
-    private  var callback: IGratiaDataCallback? = null
-
+    private var callback: IGratiaDataCallback? = null
     override fun getGratia() {
+        //通知View层，数据正在加载中
         callback?.onLoading()
-        val apiInterface = RetrofitCreator.getApiInterface()
-        val task = apiInterface?.getGratiaData()
-        task?.enqueue(object :Callback<GratiaBean>{
-            override fun onResponse(call: Call<GratiaBean>, response: Response<GratiaBean>) {
-                if(response.code() == HttpURLConnection.HTTP_OK){
-                    val gratiaBean = response.body()
-                    if(gratiaBean?.data != null){
-                        //数据加载成功
-                        callback?.onGratiaDataLoad(gratiaBean)
-                    }else{
-                        //数据为空
-                        callback?.onEmpty()
-                    }
-                }else{
-                    //数据加载失败
-                    callback?.onError()
-                }
-            }
-
-            override fun onFailure(call: Call<GratiaBean>, t: Throwable) {
-                //数据加载失败
+        GratiaModel.getGratia(
+            //通知View层，数据请求成功
+            successCallback = { gratiaBean ->
+                callback?.onGratiaDataLoad(gratiaBean)
+            },
+            //通知View层，数据为空
+            emptyCallback = {
+                callback?.onEmpty()
+            },
+            //通知View层，数据请求失败
+            errorCallback = {
                 callback?.onError()
             }
-        })
+        )
     }
 
     override fun registerViewCallback(callback: IGratiaDataCallback) {
