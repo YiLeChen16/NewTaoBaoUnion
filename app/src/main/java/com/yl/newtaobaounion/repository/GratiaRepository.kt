@@ -7,7 +7,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 /**
- * @description: TODO
+ * @description: 特惠界面数据仓库
  * @author YL Chen
  * @date 2024/8/29 15:20
  * @version 1.0
