@@ -9,7 +9,7 @@ import retrofit2.Response
 import java.net.HttpURLConnection
 
 /**
- * @description: TODO
+ * @description: 分类数据仓库，负责请求分类数据，并存储数据
  * @author YL Chen
  * @date 2024/8/28 17:06
  * @version 1.0

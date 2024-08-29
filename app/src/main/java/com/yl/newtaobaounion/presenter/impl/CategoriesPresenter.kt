@@ -1,15 +1,9 @@
 package com.yl.newtaobaounion.presenter.impl
 
-import com.yl.newtaobaounion.https.RetrofitCreator
 import com.yl.newtaobaounion.model.CategoriesModel
-import com.yl.newtaobaounion.model.dataBean.CategoriesBean
 import com.yl.newtaobaounion.presenter.ICategoriesPresenter
-import com.yl.newtaobaounion.utils.LogUtils
 import com.yl.newtaobaounion.view.IonCategoriesDataCallback
-import retrofit2.Call
-import retrofit2.Response
-import java.net.HttpURLConnection
-
+//Presenter层只负责视图逻辑，业务逻辑提升到Model层
 class CategoriesPresenter private constructor() : ICategoriesPresenter {
     private var onCategoriesDataListener: IonCategoriesDataCallback? = null
 
