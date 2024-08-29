@@ -1,17 +1,10 @@
 package com.yl.newtaobaounion.presenter.impl
 
-import com.yl.newtaobaounion.https.RetrofitCreator
 import com.yl.newtaobaounion.model.RecommendModel
 import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.presenter.IRecommendPresenter
-import com.yl.newtaobaounion.repository.RecommendRepository.Companion.loadMoreRecommendBean
-import com.yl.newtaobaounion.repository.RecommendRepository.Companion.recommendBean
-import com.yl.newtaobaounion.utils.LogUtils
 import com.yl.newtaobaounion.view.IRecommendDataCallback
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import java.net.HttpURLConnection
+
 
 //私有化构造方法
 //由于这个presenter会被首页的多个fragment使用，故直接私有化构造方法，并对外提供单例获取此类的对象，避免重复创建对象
