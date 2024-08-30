@@ -207,7 +207,6 @@ class HomeViewPagerFragment: BaseFragment(),
         //为刷新框架设置下拉刷新监听事件
         binding.refreshLayout.setOnLoadMoreListener {
             //加载更多条目
-            //TODO::
             LogUtils.d(
                 this@HomeViewPagerFragment,
                 "LoadMore currentTag-->${currentTextView?.text.toString()}"
@@ -320,7 +319,6 @@ class HomeViewPagerFragment: BaseFragment(),
         LogUtils.d(this, "onRefreshDataLoadEmpty--")
         //停止刷新加载
         binding.refreshLayout.finishRefresh()
-        //TODO::
         //提示用户刷新数据为空，并保留当前加载的数据
         ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
     }
