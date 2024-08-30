@@ -25,7 +25,6 @@ import com.yl.newtaobaounion.presenter.impl.RecommendPresenter
 import com.yl.newtaobaounion.ui.adapter.DetailTagListAdapter
 import com.yl.newtaobaounion.utils.LogUtils
 import com.yl.newtaobaounion.utils.PresenterManager
-import com.yl.newtaobaounion.utils.SPUtils
 import com.yl.newtaobaounion.utils.ToastUtils
 import com.yl.newtaobaounion.view.IRecommendDataCallback
 
