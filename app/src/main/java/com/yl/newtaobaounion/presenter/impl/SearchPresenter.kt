@@ -64,7 +64,7 @@ class SearchPresenter : ISearchPresenter {
             //通知View层，数据加载成功
             successCallback = {
                 histories->
-                callback?.onHistoryWordLoad(histories.getHistories())
+                callback?.onHistoryWordLoad(histories.toList())
             },
             //通知view层，数据为空
             emptyCallback = {

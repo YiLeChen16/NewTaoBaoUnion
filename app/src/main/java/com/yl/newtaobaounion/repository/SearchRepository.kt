@@ -1,14 +1,15 @@
 package com.yl.newtaobaounion.repository
 
+import com.tencent.mmkv.MMKV
 import com.yl.newtaobaounion.https.RetrofitCreator
-import com.yl.newtaobaounion.model.dataBean.Histories
 import com.yl.newtaobaounion.model.dataBean.HotKeyBean
 import com.yl.newtaobaounion.model.dataBean.RecommendBean
-import com.yl.newtaobaounion.utils.JSONCacheUtils
 import com.yl.newtaobaounion.utils.LogUtils
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.stream.Collectors
+
 
 /**
  * @description: 搜索界面数据仓库，负责请求界面数据并存储界面数据
@@ -27,8 +28,8 @@ class SearchRepository {
         private var currentKeyword: String? = null
         //请求的搜索数据
         var recommendBean: RecommendBean? = null
-        //获取数据缓存类的单例
-        private val mJsonCacheUtils: JSONCacheUtils = JSONCacheUtils.getInstance()
+        //获取MMVK全局实例
+        var kv: MMKV = MMKV.defaultMMKV()
         //最大历史关键词个数
         val MAX_HISTORY_COUNT: Int = 10
         //当前搜索页面数
@@ -116,14 +117,18 @@ class SearchRepository {
 
         //加载历史关键词数据
         fun getHistoryWordData(
-            successCallback: (histories: Histories) -> Unit,
+            successCallback: (set: Set<String>) -> Unit,
             emptyCallback: () -> Unit
         ) {
-            val histories: Histories? = mJsonCacheUtils.getCache(
-                KEY_HISTORY,
-                Histories::class.java
-            )
-            if (histories?.getHistories() != null && histories.getHistories().size !== 0
+            val stringSet = kv.decodeStringSet(KEY_HISTORY)
+            if(stringSet == null){
+                //数据为空
+                emptyCallback()
+            }else{
+                //数据加载成功
+                successCallback(stringSet)
+            }
+            /*if (histories?.getHistories() != null && histories.getHistories().size !== 0
             ) {
                 LogUtils.d(this@Companion, "loadHistoryWord-->${histories.getHistories()}")
                 //数据加载成功
@@ -131,12 +136,13 @@ class SearchRepository {
             } else {
                 //数据为空
                 emptyCallback()
-            }
+            }*/
         }
 
         //删除历史关键词数据
         fun deleteHistoriesData() {
-            mJsonCacheUtils.deleteCache(KEY_HISTORY)
+            //mJsonCacheUtils.deleteCache(KEY_HISTORY)
+            kv.remove(KEY_HISTORY)
         }
 
         //加载更多搜索数据
@@ -184,42 +190,44 @@ class SearchRepository {
             )
         }
 
-        //保存历史数据
-        private fun saveHistory(keyword: String) {
-            var histories = mJsonCacheUtils.getCache(KEY_HISTORY, Histories::class.java)
 
-            //之前有历史记录，去重
-            var historyList: MutableList<String>? = null
-            if (histories?.getHistories() != null) {
-                historyList = histories.getHistories().toMutableList()
-                if (historyList.contains(keyword)) {
-                    historyList.remove(keyword)
+        //保存历史数据（MMVK）
+        private fun saveHistory(keyword: String) {
+            val data = kv.decodeStringSet(KEY_HISTORY)
+            //历史数据集合
+            var set:MutableSet<String>?
+            if(data == null){
+                //无历史数据
+                //创建并添加历史数据集合
+                set = mutableSetOf()
+                set.add(keyword)
+                kv.encode(KEY_HISTORY,set)
+            }else{
+                //有历史数据
+                //判断当前集合中是否包含此关键词
+                if(data.contains(keyword)){
+                    //将之前的关键词去除
+                    data.remove(keyword)
+                }
+                //判断历史数据个数是否大于最大值
+                if(data.size > MAX_HISTORY_COUNT){
+                    //将当前关键词添加进去
+                    data.add(keyword)
+                    //将set转化为list
+                    val list = data.stream().collect(Collectors.toList())
+                    //裁剪集合
+                    val subList = list.subList(list.size - 10,list.size)
+                    //转回set
+                    val subSet = subList.stream().collect(Collectors.toSet())
+                    //存回MMKV
+                    kv.encode(KEY_HISTORY,subSet)
+                }else{
+                    //直接添加
+                    data.add(keyword)
+                    LogUtils.d(this@Companion,"data-->${data}")
+                    kv.encode(KEY_HISTORY,data)
                 }
             }
-            //已完成去重
-            if (historyList == null) {
-                historyList = ArrayList()
-            }
-            if (histories == null) {
-                histories = Histories()
-            }
-
-            //将新的历史数据添加到历史记录集合中
-            historyList.add(keyword)
-
-            //控制历史记录数量在十个以内
-            if (historyList.size > MAX_HISTORY_COUNT) {
-                //对集合进行裁剪
-                historyList = historyList.subList(historyList.size - 10, historyList.size)
-            }
-            histories.setHistories(historyList.toList())
-
-            //将历史记录集合进行缓存
-            mJsonCacheUtils.saveCache(
-                KEY_HISTORY,
-                histories
-            )
         }
-
     }
 }

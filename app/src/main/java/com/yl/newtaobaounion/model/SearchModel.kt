@@ -1,7 +1,5 @@
 package com.yl.newtaobaounion.model
 
-import com.yl.newtaobaounion.R
-import com.yl.newtaobaounion.model.dataBean.Histories
 import com.yl.newtaobaounion.model.dataBean.HotKeyBean
 import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.repository.SearchRepository
@@ -45,7 +43,7 @@ class SearchModel {
 
         //加载历史搜索关键词数据
         fun getHistoriesWord(
-            successCallback: (histories: Histories) -> Unit,
+            successCallback: (set: Set<String>) -> Unit,
             emptyCallback: () -> Unit
         ){
             SearchRepository.getHistoryWordData(successCallback,emptyCallback)

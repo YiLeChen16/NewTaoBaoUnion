@@ -40,20 +40,20 @@
                     }
                 },
                 {
-                    "source": "D:\\Gradle\\caches\\transforms-3\\5ad89e5e5e9469120d4cc90a464b4980\\transformed\\lifecycle-viewmodel-2.6.2\\res\\values\\values.xml",
+                    "source": "D:\\Gradle\\caches\\transforms-3\\362279c85d1d2f6932021b61df7b7d52\\transformed\\lifecycle-runtime-2.5.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "49",
-                        "endOffsets": "100"
+                        "endColumns": "42",
+                        "endOffsets": "93"
                     },
                     "to": {
-                        "startLines": "2039",
+                        "startLines": "2036",
                         "startColumns": "4",
-                        "startOffsets": "116053",
-                        "endColumns": "49",
-                        "endOffsets": "116098"
+                        "startOffsets": "115896",
+                        "endColumns": "42",
+                        "endOffsets": "115934"
                     }
                 },
                 {
@@ -114,23 +114,6 @@
                     }
                 },
                 {
-                    "source": "D:\\Gradle\\caches\\transforms-3\\5db5e07a398552c53b07f60fd2a17a91\\transformed\\lifecycle-runtime-2.6.2\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "42",
-                        "endOffsets": "93"
-                    },
-                    "to": {
-                        "startLines": "2036",
-                        "startColumns": "4",
-                        "startOffsets": "115896",
-                        "endColumns": "42",
-                        "endOffsets": "115934"
-                    }
-                },
-                {
                     "source": "D:\\Gradle\\caches\\transforms-3\\93ac10b68cc6b2ecdb3339310a897f91\\transformed\\fragment-1.3.6\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,10",
@@ -147,6 +130,23 @@
                         "endLines": "1970,2002,2040,11090,11094",
                         "endColumns": "56,64,63,24,24",
                         "endOffsets": "112550,114211,116162,665424,665573"
+                    }
+                },
+                {
+                    "source": "D:\\Gradle\\caches\\transforms-3\\d7bb24ffaf94c381f0f59bb3a6da7d48\\transformed\\jetified-savedstate-1.2.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "53",
+                        "endOffsets": "104"
+                    },
+                    "to": {
+                        "startLines": "2038",
+                        "startColumns": "4",
+                        "startOffsets": "115999",
+                        "endColumns": "53",
+                        "endOffsets": "116048"
                     }
                 },
                 {
@@ -315,23 +315,6 @@
                     }
                 },
                 {
-                    "source": "D:\\Gradle\\caches\\transforms-3\\be0b9e3eb7d36c371d11f1c6da43abde\\transformed\\jetified-savedstate-1.2.1\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "53",
-                        "endOffsets": "104"
-                    },
-                    "to": {
-                        "startLines": "2038",
-                        "startColumns": "4",
-                        "startOffsets": "115999",
-                        "endColumns": "53",
-                        "endOffsets": "116048"
-                    }
-                },
-                {
                     "source": "D:\\Gradle\\caches\\transforms-3\\4bdf8e5c67149744c4d687fb0cc0f65a\\transformed\\jetified-refresh-header-two-level-2.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -348,6 +331,23 @@
                         "endLines": "13152",
                         "endColumns": "24",
                         "endOffsets": "741060"
+                    }
+                },
+                {
+                    "source": "D:\\Gradle\\caches\\transforms-3\\3a304d0ba096be57901359b2af85f896\\transformed\\lifecycle-viewmodel-2.5.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "49",
+                        "endOffsets": "100"
+                    },
+                    "to": {
+                        "startLines": "2039",
+                        "startColumns": "4",
+                        "startOffsets": "116053",
+                        "endColumns": "49",
+                        "endOffsets": "116098"
                     }
                 },
                 {
