@@ -53,7 +53,6 @@ class GratiaFragment:BaseFragment(), IGratiaDataCallback {
     }
 
     override fun onGratiaDataLoad(gratiaBean: GratiaBean) {
-        //TODO::
         //创建适配器
         val gratiaListAdapter = GratiaListAdapter()
         //为适配器设置数据

@@ -6,6 +6,9 @@ import androidx.viewbinding.ViewBinding
 import com.yl.newtaobaounion.base.BaseFragment
 import com.yl.newtaobaounion.databinding.FragmentSelectedBaseBinding
 import com.yl.newtaobaounion.databinding.FragmentSelectedBinding
+import com.yl.newtaobaounion.model.dataBean.Constant.EMPTY_MSG
+import com.yl.newtaobaounion.model.dataBean.Constant.ERROR_MSG
+import com.yl.newtaobaounion.model.dataBean.Constant.NET_ERROR_MSG
 import com.yl.newtaobaounion.model.dataBean.SelectedBean
 import com.yl.newtaobaounion.presenter.impl.SelectedPresenter
 import com.yl.newtaobaounion.ui.adapter.DetailTagListAdapter
@@ -84,24 +87,24 @@ class SelectedFragment : BaseFragment(), ISelectedDataCallback {
     override fun onMoreSelectedDataEmpty() {
         //停止刷新加载
         binding.refreshLayout.finishLoadMore()
-        ToastUtils.showToast("已到达宇宙的尽头~")
+        ToastUtils.showToast(EMPTY_MSG)
     }
 
     //更多数据加载失败
     override fun onMoreSelectedDataError() {
         //停止刷新加载
         binding.refreshLayout.finishLoadMore()
-        ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
+        ToastUtils.showToast(ERROR_MSG)
     }
 
     override fun onError() {
         setupCurrentState(State.ERROR)
-        ToastUtils.showToast("断水断电别断网啊，请稍后再试~")
+        ToastUtils.showToast(NET_ERROR_MSG)
     }
 
     override fun onEmpty() {
         setupCurrentState(State.EMPTY)
-        ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
+        ToastUtils.showToast(ERROR_MSG)
     }
 
     override fun onLoading() {

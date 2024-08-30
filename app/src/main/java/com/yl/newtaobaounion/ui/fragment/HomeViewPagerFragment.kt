@@ -20,6 +20,10 @@ import com.yl.newtaobaounion.base.BaseFragment
 import com.yl.newtaobaounion.databinding.FragmentHomeViewPagerBaseBinding
 import com.yl.newtaobaounion.databinding.FragmentHomeViewPagerBinding
 import com.yl.newtaobaounion.model.dataBean.CategoriesData
+import com.yl.newtaobaounion.model.dataBean.Constant.CATEGORIES_DATA
+import com.yl.newtaobaounion.model.dataBean.Constant.EMPTY_MSG
+import com.yl.newtaobaounion.model.dataBean.Constant.ERROR_MSG
+import com.yl.newtaobaounion.model.dataBean.Constant.REFRESH_SUCCESS_MSG
 import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.presenter.impl.RecommendPresenter
 import com.yl.newtaobaounion.ui.adapter.DetailTagListAdapter
@@ -41,7 +45,7 @@ class HomeViewPagerFragment: BaseFragment(),
             // 而此时如果没有无参构造函数就会抛出异常，造成程序崩溃。
             fun newInstance(categoriesData: CategoriesData?): HomeViewPagerFragment {
                 val args = Bundle()
-                args.putParcelable("categoriesData", categoriesData)
+                args.putParcelable(CATEGORIES_DATA, categoriesData)
                 val fragment = HomeViewPagerFragment()
                 fragment.setArguments(args)
                 return fragment
@@ -84,7 +88,7 @@ class HomeViewPagerFragment: BaseFragment(),
     @RequiresApi(Build.VERSION_CODES.O)
     override fun loadRootViewBinding(container: ViewGroup?): ViewBinding {
         //获取传递的参数
-        val categoriesData = arguments?.getParcelable<CategoriesData>("categoriesData")
+        val categoriesData = arguments?.getParcelable<CategoriesData>(CATEGORIES_DATA)
         orange = ContextCompat.getColor(
             BaseApplication.getAppContext(),
             com.yl.newtaobaounion.R.color.orange
@@ -275,7 +279,7 @@ class HomeViewPagerFragment: BaseFragment(),
         LogUtils.d(this, "onMoreDataLoadError--")
         //停止下拉刷新
         binding.refreshLayout.finishLoadMore()
-        ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
+        ToastUtils.showToast(ERROR_MSG)
     }
 
     /**
@@ -285,7 +289,7 @@ class HomeViewPagerFragment: BaseFragment(),
         LogUtils.d(this, "onMoreDataLoadEmpty--")
         //停止下拉刷新
         binding.refreshLayout.finishLoadMore()
-        ToastUtils.showToast("已到达宇宙的尽头~")
+        ToastUtils.showToast(EMPTY_MSG)
     }
 
     /**
@@ -295,9 +299,8 @@ class HomeViewPagerFragment: BaseFragment(),
         LogUtils.d(this, "onRefreshDataLoadSuccess-->$recommendBean")
         //停止刷新加载
         binding.refreshLayout.finishRefresh()
-        //TODO::设置数据
         detailTagListAdapter?.setData(recommendBean.data.list)
-        ToastUtils.showToast("刷新成功~")
+        ToastUtils.showToast(REFRESH_SUCCESS_MSG)
     }
 
     /**
@@ -307,9 +310,8 @@ class HomeViewPagerFragment: BaseFragment(),
         LogUtils.d(this, "onRefreshDataLoadError--")
         //停止刷新加载
         binding.refreshLayout.finishRefresh()
-        //TODO::
         //提示用户刷新失败，并保留当前加载的数据
-        ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
+        ToastUtils.showToast(ERROR_MSG)
     }
 
     /**
@@ -320,7 +322,7 @@ class HomeViewPagerFragment: BaseFragment(),
         //停止刷新加载
         binding.refreshLayout.finishRefresh()
         //提示用户刷新数据为空，并保留当前加载的数据
-        ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
+        ToastUtils.showToast(ERROR_MSG)
     }
 
     /**

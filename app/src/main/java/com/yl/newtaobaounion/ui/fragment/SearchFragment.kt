@@ -10,6 +10,11 @@ import androidx.viewbinding.ViewBinding
 import com.yl.newtaobaounion.base.BaseFragment
 import com.yl.newtaobaounion.databinding.FragmentSearchBaseBinding
 import com.yl.newtaobaounion.databinding.FragmentSearchBinding
+import com.yl.newtaobaounion.model.dataBean.Constant.CANCLE
+import com.yl.newtaobaounion.model.dataBean.Constant.EMPTY_MSG
+import com.yl.newtaobaounion.model.dataBean.Constant.ERROR_MSG
+import com.yl.newtaobaounion.model.dataBean.Constant.SEARCH
+import com.yl.newtaobaounion.model.dataBean.Constant.SEARCH_EMPTY_MSG
 import com.yl.newtaobaounion.model.dataBean.HotKeyBean
 import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.presenter.impl.SearchPresenter
@@ -62,7 +67,7 @@ class SearchFragment:BaseFragment(), ISearchDataCallback, FlowTextLayout.OnItemC
         binding.flowTextLayoutRecommend.setOnItemClickListener(this)
         //给搜索框设置监听事件
         baseBinding.tvSearchOrCancelSearch.setOnClickListener {
-            if(baseBinding.tvSearchOrCancelSearch.text.toString().equals("搜索")){
+            if(baseBinding.tvSearchOrCancelSearch.text.toString().equals(SEARCH)){
                 search(baseBinding.edSearchBox.text.toString())
             }else{
                 cancelSearch()
@@ -131,13 +136,13 @@ class SearchFragment:BaseFragment(), ISearchDataCallback, FlowTextLayout.OnItemC
     override fun onLoadMoreEmpty() {
         //停止刷新加载
         binding.refreshLayout.finishLoadMore()
-        ToastUtils.showToast("已到达宇宙的尽头~")
+        ToastUtils.showToast(EMPTY_MSG)
     }
 
     override fun onLoadMoreError() {
         //停止刷新加载
         binding.refreshLayout.finishLoadMore()
-        ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
+        ToastUtils.showToast(ERROR_MSG)
     }
 
     override fun onError() {
@@ -162,10 +167,10 @@ class SearchFragment:BaseFragment(), ISearchDataCallback, FlowTextLayout.OnItemC
     //搜索
     private fun search(s:String){
         if(s == ""){
-            ToastUtils.showToast("搜索内容为空哦~")
+            ToastUtils.showToast(SEARCH_EMPTY_MSG)
             return
         }
-        baseBinding.tvSearchOrCancelSearch.text = "取消"
+        baseBinding.tvSearchOrCancelSearch.text = CANCLE
         searchPresenter.getSearchData(s)
         binding.refreshLayout.visibility = View.VISIBLE
         binding.recommendLayout.visibility = View.INVISIBLE
@@ -179,7 +184,7 @@ class SearchFragment:BaseFragment(), ISearchDataCallback, FlowTextLayout.OnItemC
     //取消搜索
     private fun cancelSearch(){
         baseBinding.edSearchBox.setText("")
-        baseBinding.tvSearchOrCancelSearch.text = "搜索"
+        baseBinding.tvSearchOrCancelSearch.text = SEARCH
         searchPresenter.loadHistoryWord()//更新搜索历史记录
         //searchPresenter.getHotkey()
         binding.refreshLayout.visibility = View.GONE

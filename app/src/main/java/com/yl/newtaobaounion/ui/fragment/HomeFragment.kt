@@ -7,6 +7,8 @@ import com.yl.newtaobaounion.base.BaseFragment
 import com.yl.newtaobaounion.databinding.FragmentHomeBaseBinding
 import com.yl.newtaobaounion.databinding.FragmentHomeBinding
 import com.yl.newtaobaounion.model.dataBean.CategoriesBean
+import com.yl.newtaobaounion.model.dataBean.Constant.ERROR_MSG
+import com.yl.newtaobaounion.model.dataBean.Constant.NET_ERROR_MSG
 import com.yl.newtaobaounion.presenter.impl.CategoriesPresenter
 import com.yl.newtaobaounion.ui.activity.MainActivity
 import com.yl.newtaobaounion.ui.adapter.HomeViewPagerAdapter
@@ -87,12 +89,12 @@ class HomeFragment : BaseFragment(), IonCategoriesDataCallback {
 
     override fun onError() {
         setupCurrentState(State.ERROR)
-        ToastUtils.showToast("断水断电别断网~请稍后再试~")
+        ToastUtils.showToast(NET_ERROR_MSG)
     }
 
     override fun onEmpty() {
         setupCurrentState(State.EMPTY)
-        ToastUtils.showToast("数据好像被外星人抢走咯~请稍后再试~")
+        ToastUtils.showToast(ERROR_MSG)
     }
 
     override fun onLoading() {
