@@ -234,11 +234,12 @@ class HomeViewPagerFragment: BaseFragment(),
     override fun retry() {
         LogUtils.d(this, "retry")
         //重新进行网络请求
-        val tag = SPUtils.getString(
+        /*val tag = SPUtils.getString(
             viewKeyWord,
             firstTextView?.text.toString(),
             BaseApplication.getAppContext()
-        )
+        )*/
+        val tag = mmkv.decodeString(viewKeyWord, firstTextView?.text.toString())
         recommendPresenter.getRecommendDataByKeyWord(viewKeyWord, tag!!, false)
     }
 
