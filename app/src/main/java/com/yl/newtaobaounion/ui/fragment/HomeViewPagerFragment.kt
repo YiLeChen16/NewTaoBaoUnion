@@ -14,6 +14,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewbinding.ViewBinding
+import com.tencent.mmkv.MMKV
 import com.yl.newtaobaounion.base.BaseApplication
 import com.yl.newtaobaounion.base.BaseFragment
 import com.yl.newtaobaounion.databinding.FragmentHomeViewPagerBaseBinding
@@ -42,7 +43,7 @@ class HomeViewPagerFragment: BaseFragment(),
             fun newInstance(categoriesData: CategoriesData?): HomeViewPagerFragment {
                 val args = Bundle()
                 args.putParcelable("categoriesData", categoriesData)
-                var fragment = HomeViewPagerFragment()
+                val fragment = HomeViewPagerFragment()
                 fragment.setArguments(args)
                 return fragment
             }
@@ -57,6 +58,8 @@ class HomeViewPagerFragment: BaseFragment(),
     private lateinit var recommendPresenter: RecommendPresenter
     private lateinit var viewKeyWord: String
     private var detailTagListAdapter: DetailTagListAdapter? = null
+    val mmkv = MMKV.defaultMMKV()
+
 
     //创建集合用于保存当前页面的所有Tag的对象
     private var tagList: MutableSet<TextView> = mutableSetOf()
@@ -109,7 +112,7 @@ class HomeViewPagerFragment: BaseFragment(),
             textView.onFocusChangeListener = OnFocusChangeListener { v, hasFocus ->
                 LogUtils.d(
                     this@HomeViewPagerFragment,
-                    "${textView.text.toString()} hasFocus-->$hasFocus"
+                    "${textView.text} hasFocus-->$hasFocus"
                 )
                 if (hasFocus) {
                     if (textView != currentTextView) {
@@ -127,11 +130,13 @@ class HomeViewPagerFragment: BaseFragment(),
                     //记录当前点击的tag
                     currentTextView = textView
                     //将当前点击的tag保存到SP中
-                    SPUtils.putString(
+                    /*SPUtils.putString(
                         viewKeyWord,
                         textView.text.toString(),
                         BaseApplication.getAppContext()
-                    )
+                    )*/
+                    //用MMVK替代SP
+                    mmkv.encode(viewKeyWord,textView.text.toString())
                 } else {
                     // 当前 TextView 失去焦点时执行的操作
                     textView.setTextColor(Color.BLACK) // 示例：恢复文本颜色为黑色
@@ -352,12 +357,15 @@ class HomeViewPagerFragment: BaseFragment(),
         if (!firstLaunch) {
             LogUtils.d(this, "onResume-->重新回到界面")
             //从SP中获取到当前页面的tag
-            val currentTag =
+/*            val currentTag =
                 SPUtils.getString(
                     viewKeyWord,
                     firstTextView?.text.toString(),
                     BaseApplication.getAppContext()
                 )
+*/
+            //使用MMVK替代SP
+            val currentTag = mmkv.decodeString(viewKeyWord,firstTextView?.text.toString())
             //遍历textView集合
             for (textView in tagList) {
                 if (textView.text.toString() == currentTag) {
