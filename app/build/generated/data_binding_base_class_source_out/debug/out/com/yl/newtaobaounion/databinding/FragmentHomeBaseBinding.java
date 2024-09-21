@@ -15,6 +15,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.yl.newtaobaounion.R;
+import com.yl.newtaobaounion.ui.custom.BannerView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,6 +23,9 @@ import java.lang.String;
 public final class FragmentHomeBaseBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final BannerView bannerView;
 
   @NonNull
   public final FrameLayout baseLayout;
@@ -39,9 +43,11 @@ public final class FragmentHomeBaseBinding implements ViewBinding {
   public final TextView tvAppName;
 
   private FragmentHomeBaseBinding(@NonNull ConstraintLayout rootView,
-      @NonNull FrameLayout baseLayout, @NonNull EditText edSearchBox, @NonNull ImageView ivScan,
+      @NonNull BannerView bannerView, @NonNull FrameLayout baseLayout,
+      @NonNull EditText edSearchBox, @NonNull ImageView ivScan,
       @NonNull RelativeLayout relativeLayout, @NonNull TextView tvAppName) {
     this.rootView = rootView;
+    this.bannerView = bannerView;
     this.baseLayout = baseLayout;
     this.edSearchBox = edSearchBox;
     this.ivScan = ivScan;
@@ -76,6 +82,12 @@ public final class FragmentHomeBaseBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.banner_view;
+      BannerView bannerView = ViewBindings.findChildViewById(rootView, id);
+      if (bannerView == null) {
+        break missingId;
+      }
+
       id = R.id.base_layout;
       FrameLayout baseLayout = ViewBindings.findChildViewById(rootView, id);
       if (baseLayout == null) {
@@ -106,8 +118,8 @@ public final class FragmentHomeBaseBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBaseBinding((ConstraintLayout) rootView, baseLayout, edSearchBox,
-          ivScan, relativeLayout, tvAppName);
+      return new FragmentHomeBaseBinding((ConstraintLayout) rootView, bannerView, baseLayout,
+          edSearchBox, ivScan, relativeLayout, tvAppName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

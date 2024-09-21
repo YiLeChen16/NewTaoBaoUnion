@@ -1,7 +1,6 @@
 package com.yl.newtaobaounion.utils
 
-import com.bumptech.glide.Glide.init
-import com.yl.newtaobaounion.presenter.impl.CategoriesPresenter
+import com.yl.newtaobaounion.presenter.impl.RecommendBasePresenter
 import com.yl.newtaobaounion.presenter.impl.GratiaPresenter
 import com.yl.newtaobaounion.presenter.impl.RecommendPresenter
 import com.yl.newtaobaounion.presenter.impl.SearchPresenter
@@ -18,7 +17,7 @@ class PresenterManager private constructor() {
         }
     }
     //声明所有presenter的对象
-    var categoriesPresenter:CategoriesPresenter
+    var categoriesPresenter:RecommendBasePresenter
     var recommendPresenter:RecommendPresenter
     var selectedPresenter:SelectedPresenter
     var gratiaPresenter:GratiaPresenter
@@ -26,7 +25,7 @@ class PresenterManager private constructor() {
 
     //在创建此类的对象时，初始化所有的presenter
     init {
-        categoriesPresenter = CategoriesPresenter.getInstance()
+        categoriesPresenter = RecommendBasePresenter.getInstance()
         recommendPresenter = RecommendPresenter.getInstance()
         selectedPresenter = SelectedPresenter.getInstance()
         gratiaPresenter = GratiaPresenter.getInstance()

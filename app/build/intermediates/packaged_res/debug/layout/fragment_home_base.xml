@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:yl="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -44,13 +45,22 @@
             android:layout_toStartOf="@id/iv_scan"
             android:layout_toEndOf="@id/tv_app_name"
             android:background="@drawable/edit_search_box_shape"
+            android:clickable="true"
+            android:editable="false"
             android:gravity="center_vertical"
             android:hint="搜索你喜欢的宝贝"
             android:paddingLeft="@dimen/dp_10"
-            android:textSize="@dimen/sp_14"
-            android:clickable="true"
-            android:editable="false"/>
+            android:textSize="@dimen/sp_14" />
     </RelativeLayout>
+
+    <com.yl.newtaobaounion.ui.custom.BannerView
+        android:id="@+id/banner_view"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        yl:loop="true"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout" />
 
     <FrameLayout
         android:id="@+id/base_layout"
@@ -59,6 +69,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/banner_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

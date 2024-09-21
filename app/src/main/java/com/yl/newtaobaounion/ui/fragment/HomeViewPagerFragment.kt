@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnFocusChangeListener
 import android.view.ViewGroup
@@ -15,10 +16,13 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewbinding.ViewBinding
 import com.tencent.mmkv.MMKV
+import com.yl.newtaobaounion.R
 import com.yl.newtaobaounion.base.BaseApplication
 import com.yl.newtaobaounion.base.BaseFragment
 import com.yl.newtaobaounion.databinding.FragmentHomeViewPagerBaseBinding
 import com.yl.newtaobaounion.databinding.FragmentHomeViewPagerBinding
+import com.yl.newtaobaounion.model.dataBean.BannerBean
+import com.yl.newtaobaounion.model.dataBean.BannerData
 import com.yl.newtaobaounion.model.dataBean.CategoriesData
 import com.yl.newtaobaounion.model.dataBean.Constant.CATEGORIES_DATA
 import com.yl.newtaobaounion.model.dataBean.Constant.EMPTY_MSG
@@ -26,7 +30,9 @@ import com.yl.newtaobaounion.model.dataBean.Constant.ERROR_MSG
 import com.yl.newtaobaounion.model.dataBean.Constant.REFRESH_SUCCESS_MSG
 import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.presenter.impl.RecommendPresenter
+import com.yl.newtaobaounion.repository.SearchRepository.Companion.recommendBean
 import com.yl.newtaobaounion.ui.adapter.DetailTagListAdapter
+import com.yl.newtaobaounion.ui.custom.BannerView
 import com.yl.newtaobaounion.utils.LogUtils
 import com.yl.newtaobaounion.utils.PresenterManager
 import com.yl.newtaobaounion.utils.ToastUtils
@@ -34,25 +40,23 @@ import com.yl.newtaobaounion.view.IRecommendDataCallback
 
 
 //首页viewPager的Fragment
-class HomeViewPagerFragment: BaseFragment(),
+class HomeViewPagerFragment : BaseFragment(),
     IRecommendDataCallback {
 
-        companion object {
-            //参数传递
-            //使用fragment必须提供一个无参构造，
-            // 因为当Fragment因为某种原因重新创建时，会调用到onCreate方法传入之前保存的状态，
-            // 在instantiate方法中通过反射无参构造函数创建一个Fragment，并且为Arguments初始化为原来保存的值，
-            // 而此时如果没有无参构造函数就会抛出异常，造成程序崩溃。
-            fun newInstance(categoriesData: CategoriesData?): HomeViewPagerFragment {
-                val args = Bundle()
-                args.putParcelable(CATEGORIES_DATA, categoriesData)
-                val fragment = HomeViewPagerFragment()
-                fragment.setArguments(args)
-                return fragment
-            }
+    companion object {
+        //参数传递
+        //使用fragment必须提供一个无参构造，
+        // 因为当Fragment因为某种原因重新创建时，会调用到onCreate方法传入之前保存的状态，
+        // 在instantiate方法中通过反射无参构造函数创建一个Fragment，并且为Arguments初始化为原来保存的值，
+        // 而此时如果没有无参构造函数就会抛出异常，造成程序崩溃。
+        fun newInstance(categoriesData: CategoriesData?): HomeViewPagerFragment {
+            val args = Bundle()
+            args.putParcelable(CATEGORIES_DATA, categoriesData)
+            val fragment = HomeViewPagerFragment()
+            fragment.setArguments(args)
+            return fragment
         }
-
-
+    }
 
 
     private lateinit var binding: FragmentHomeViewPagerBinding
@@ -124,7 +128,7 @@ class HomeViewPagerFragment: BaseFragment(),
                     // 当前 TextView 获得焦点时执行的操作
                     textView.setTextColor(orange!!) // 示例：改变文本颜色为橙色
                     //点击了其他的tag，切换当前页面关键字
-                    LogUtils.e(this@HomeViewPagerFragment, "${textView.text.toString()} 加载数据")
+                    LogUtils.e(this@HomeViewPagerFragment, "${textView.text} 加载数据")
                     recommendPresenter.getRecommendDataByKeyWord(
                         viewKeyWord,
                         textView.text.toString(),
@@ -139,7 +143,7 @@ class HomeViewPagerFragment: BaseFragment(),
                         BaseApplication.getAppContext()
                     )*/
                     //用MMVK替代SP
-                    mmkv.encode(viewKeyWord,textView.text.toString())
+                    mmkv.encode(viewKeyWord, textView.text.toString())
                 } else {
                     // 当前 TextView 失去焦点时执行的操作
                     textView.setTextColor(Color.BLACK) // 示例：恢复文本颜色为黑色
@@ -332,6 +336,8 @@ class HomeViewPagerFragment: BaseFragment(),
         return viewKeyWord
     }
 
+
+
     override fun onError() {
         setupCurrentState(State.ERROR)
     }
@@ -357,15 +363,15 @@ class HomeViewPagerFragment: BaseFragment(),
         if (!firstLaunch) {
             LogUtils.d(this, "onResume-->重新回到界面")
             //从SP中获取到当前页面的tag
-/*            val currentTag =
-                SPUtils.getString(
-                    viewKeyWord,
-                    firstTextView?.text.toString(),
-                    BaseApplication.getAppContext()
-                )
-*/
+            /*            val currentTag =
+                            SPUtils.getString(
+                                viewKeyWord,
+                                firstTextView?.text.toString(),
+                                BaseApplication.getAppContext()
+                            )
+            */
             //使用MMVK替代SP
-            val currentTag = mmkv.decodeString(viewKeyWord,firstTextView?.text.toString())
+            val currentTag = mmkv.decodeString(viewKeyWord, firstTextView?.text.toString())
             //遍历textView集合
             for (textView in tagList) {
                 if (textView.text.toString() == currentTag) {
@@ -377,5 +383,10 @@ class HomeViewPagerFragment: BaseFragment(),
             firstLaunch = false
         }
         super.onResume()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        //mmkv.removeValueForKey(viewKeyWord)
     }
 }

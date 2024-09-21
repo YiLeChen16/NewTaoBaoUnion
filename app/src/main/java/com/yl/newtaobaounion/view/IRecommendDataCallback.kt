@@ -1,6 +1,7 @@
 package com.yl.newtaobaounion.view
 
 import com.yl.newtaobaounion.base.IBaseViewCallback
+import com.yl.newtaobaounion.model.dataBean.BannerBean
 import com.yl.newtaobaounion.model.dataBean.RecommendBean
 
 //推荐数据view层回调接口
@@ -51,4 +52,6 @@ interface IRecommendDataCallback:IBaseViewCallback {
      * 返回当前view对应的关键字
      */
     fun getViewKeyWord():String
+
+
 }

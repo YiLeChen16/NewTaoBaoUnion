@@ -453,6 +453,12 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         
     </style>
+    <declare-styleable name="BannerView">
+        <attr format="integer" name="duration"/> 
+        <attr format="boolean" name="loop"/> 
+        <attr format="color" name="indicatorNormalColor"/> 
+        <attr format="color" name="indicatorSelectedColor"/> 
+    </declare-styleable>
     <declare-styleable name="FlowTextLayoutStyle">
         <attr format="dimension" name="horizontal_space"/>
         <attr format="dimension" name="vertical_space"/>

@@ -1,6 +1,7 @@
 package com.yl.newtaobaounion.repository
 
 import com.yl.newtaobaounion.https.RetrofitCreator
+import com.yl.newtaobaounion.model.dataBean.BannerBean
 import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.utils.LogUtils
 import retrofit2.Call
@@ -16,17 +17,24 @@ import retrofit2.Response
 class RecommendRepository {
 
 
-    companion object{
+    companion object {
         private val apiInterface = RetrofitCreator.getApiInterface()
+
         //默认加载的页数
         private val DEFAULT_PAGE = 1
+
         //请求的第一页推荐数据
-        var recommendBean: RecommendBean? = null
+        var mRecommendBean: RecommendBean? = null
+
         //创建一个键值对集合用于存储对应view页面的关键字和其当前加载的页面页数
         private var viewListInfo =
             mutableMapOf<Pair<String, String>, Int>()//键代表的是对应页面关键字及其细分标签<viewKeyword,keyword>,值代表的是该页面目前的页面数
+
         //请求的更多推荐数据
-        var loadMoreRecommendBean: RecommendBean? = null
+        var mLoadMoreRecommendBean: RecommendBean? = null
+
+        //请求的轮播图数据
+        var mBannerBean: BannerBean? = null
 
         //通过关键词请求第一页推荐数据
         fun getRecommendDataByKeyWord(
@@ -39,17 +47,20 @@ class RecommendRepository {
             val task =
                 apiInterface?.getRecommendedByKeyword(DEFAULT_PAGE.toString(), keyword)
             task?.enqueue(object : Callback<RecommendBean> {
-                override fun onResponse(call: Call<RecommendBean>, response: Response<RecommendBean>) {
+                override fun onResponse(
+                    call: Call<RecommendBean>,
+                    response: Response<RecommendBean>
+                ) {
                     if (response.isSuccessful) {
-                        recommendBean = response.body()
-                        LogUtils.d(this@Companion, "recommendBean-->$recommendBean")
-                        recommendBean.let {
+                        mRecommendBean = response.body()
+                        LogUtils.d(this@Companion, "recommendBean-->$mRecommendBean")
+                        mRecommendBean.let {
                             if (it?.data?.list == null) {
                                 //数据为空
                                 emptyCallBack()
                             } else {
                                 //数据请求成功
-                                successCallBack(recommendBean!!)
+                                successCallBack(mRecommendBean!!)
                             }
                         }
                     } else {
@@ -95,15 +106,15 @@ class RecommendRepository {
                         response: Response<RecommendBean>
                     ) {
                         if (response.isSuccessful) {
-                            loadMoreRecommendBean = response.body()
+                            mLoadMoreRecommendBean = response.body()
                             LogUtils.d(
                                 this@Companion,
-                                "loadMoreRecommendBean-->$loadMoreRecommendBean"
+                                "loadMoreRecommendBean-->$mLoadMoreRecommendBean"
                             )
-                            loadMoreRecommendBean.let {
+                            mLoadMoreRecommendBean.let {
                                 if (it?.data?.list != null) {
                                     //数据加载成功
-                                    successCallBack(loadMoreRecommendBean!!)
+                                    successCallBack(mLoadMoreRecommendBean!!)
 
                                 } else {
                                     //将currentPage还原
@@ -133,9 +144,41 @@ class RecommendRepository {
                 }
             )
         }
+
+
+        fun getBannerDataByCount(
+            count: String,
+            successCallBack: (bannerBean: BannerBean) -> Unit,
+            emptyCallBack: () -> Unit,
+            errorCallBack: () -> Unit
+        ) {
+            val task = apiInterface?.getBanner(count)
+            task?.enqueue(
+                object : Callback<BannerBean> {
+                    override fun onResponse(
+                        call: Call<BannerBean>,
+                        response: Response<BannerBean>
+                    ) {
+                        if (response.isSuccessful) {
+                            mBannerBean = response.body()
+                            if (mBannerBean?.data != null) {
+                                successCallBack(mBannerBean!!)
+                            } else {
+                                emptyCallBack()
+                            }
+                        } else {
+                            errorCallBack()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<BannerBean>, t: Throwable) {
+                        LogUtils.d(this@Companion, "onFailure-->${t.message}")
+                        errorCallBack()
+                    }
+                }
+            )
+        }
     }
-
-
 
 
 }

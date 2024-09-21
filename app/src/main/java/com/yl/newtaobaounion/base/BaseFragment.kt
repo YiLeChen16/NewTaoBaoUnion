@@ -55,6 +55,9 @@ abstract class BaseFragment : Fragment() {
         initPresenter()
         loadData()
 
+        LogUtils.d(this,"onCreateView")
+
+
         return loadRootViewBinding.root
     }
 
@@ -203,6 +206,23 @@ abstract class BaseFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         release()
+    }
+
+
+    override fun onPause() {
+        super.onPause()
+        LogUtils.d(this,"onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        LogUtils.d(this,"onStop")
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        LogUtils.d(this,"onViewCreated")
+
     }
 
 

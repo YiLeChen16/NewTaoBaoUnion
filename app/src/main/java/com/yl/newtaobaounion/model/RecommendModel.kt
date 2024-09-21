@@ -1,5 +1,6 @@
 package com.yl.newtaobaounion.model
 
+import com.yl.newtaobaounion.model.dataBean.BannerBean
 import com.yl.newtaobaounion.model.dataBean.RecommendBean
 import com.yl.newtaobaounion.repository.RecommendRepository
 
@@ -40,6 +41,8 @@ class RecommendModel {
                 errorCallBack
             )
         }
+
+
     }
 
 }

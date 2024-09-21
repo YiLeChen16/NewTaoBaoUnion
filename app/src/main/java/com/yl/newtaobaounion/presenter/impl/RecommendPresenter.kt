@@ -84,6 +84,8 @@ class RecommendPresenter private constructor() : IRecommendPresenter {
         getRecommendDataByKeyWord(viewKeyword, keyword, true)
     }
 
+
+
     /**
      * 回调view层接口函数
      */
@@ -187,6 +189,7 @@ class RecommendPresenter private constructor() : IRecommendPresenter {
             }
         }
     }
+
 
     override fun registerViewCallback(callback: IRecommendDataCallback) {
         //将注册过来的view层回调接口保存到集合中

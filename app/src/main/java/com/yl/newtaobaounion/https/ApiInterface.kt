@@ -1,5 +1,6 @@
 package com.yl.newtaobaounion.https
 
+import com.yl.newtaobaounion.model.dataBean.BannerBean
 import com.yl.newtaobaounion.model.dataBean.CategoriesBean
 import com.yl.newtaobaounion.model.dataBean.GratiaBean
 import com.yl.newtaobaounion.model.dataBean.HotKeyBean
@@ -55,4 +56,14 @@ interface ApiInterface {
      */
     @GET("/shop/search-word")
     fun getHotKey():Call<HotKeyBean>
+
+    /**
+     * 获取轮播图数据
+     * @param count String 请求轮播图数量
+     * @return Call<BannerBean>
+     */
+    @GET("/shop/banner")
+    fun getBanner(
+        @Query("count") count:String
+    ):Call<BannerBean>
 }

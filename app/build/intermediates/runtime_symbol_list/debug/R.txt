@@ -584,6 +584,8 @@ int attr indicatorColor 0x7f030203
 int attr indicatorDirectionCircular 0x7f030204
 int attr indicatorDirectionLinear 0x7f030205
 int attr indicatorInset 0x7f030206
+int attr indicatorNormalColor 0x7f0304dd
+int attr indicatorSelectedColor 0x7f0304de
 int attr indicatorSize 0x7f030207
 int attr initialActivityCount 0x7f030208
 int attr insetForeground 0x7f030209
@@ -729,6 +731,7 @@ int attr logo 0x7f030294
 int attr logoAdjustViewBounds 0x7f030295
 int attr logoDescription 0x7f030296
 int attr logoScaleType 0x7f030297
+int attr loop 0x7f0304df
 int attr marginHorizontal 0x7f030298
 int attr marginLeftSystemWindowInsets 0x7f030299
 int attr marginRightSystemWindowInsets 0x7f03029a
@@ -3245,6 +3248,8 @@ int id auto 0x7f080058
 int id autoComplete 0x7f080059
 int id autoCompleteToEnd 0x7f08005a
 int id autoCompleteToStart 0x7f08005b
+int id banner_view 0x7f080218
+int id banner_view_pager 0x7f08021c
 int id barrier 0x7f08005c
 int id base_layout 0x7f08005d
 int id baseline 0x7f08005e
@@ -3375,6 +3380,7 @@ int id grouping 0x7f0800da
 int id groups 0x7f0800db
 int id guideline 0x7f0800dc
 int id guideline2 0x7f0800dd
+int id guideline3 0x7f080219
 int id header_title 0x7f0800de
 int id hideable 0x7f0800df
 int id home 0x7f0800e0
@@ -3398,6 +3404,7 @@ int id invisible 0x7f0800f1
 int id inward 0x7f0800f2
 int id italic 0x7f0800f3
 int id item_touch_helper_previous_elevation 0x7f0800f4
+int id iv 0x7f08021a
 int id iv_delete 0x7f0800f5
 int id iv_goods_img 0x7f0800f6
 int id iv_scan 0x7f0800f7
@@ -3511,6 +3518,7 @@ int id pathRelative 0x7f080162
 int id peekHeight 0x7f080163
 int id percent 0x7f080164
 int id pin 0x7f080165
+int id point_Layout 0x7f08021b
 int id position 0x7f080166
 int id postLayout 0x7f080167
 int id pressed 0x7f080168
@@ -3814,6 +3822,7 @@ int layout abc_tooltip 0x7f0b001b
 int layout activity_main 0x7f0b001c
 int layout activity_ticket 0x7f0b001d
 int layout base_layout 0x7f0b001e
+int layout custom_banner_view 0x7f0b007c
 int layout custom_dialog 0x7f0b001f
 int layout design_bottom_navigation_item 0x7f0b0020
 int layout design_bottom_sheet_dialog 0x7f0b0021
@@ -3844,6 +3853,7 @@ int layout fragment_selected_base 0x7f0b0039
 int layout include_home_view_pager_title 0x7f0b003a
 int layout item_gratia_content 0x7f0b003b
 int layout item_home_view_page_content 0x7f0b003c
+int layout item_pager 0x7f0b007d
 int layout m3_alert_dialog 0x7f0b003d
 int layout m3_alert_dialog_actions 0x7f0b003e
 int layout m3_alert_dialog_title 0x7f0b003f
@@ -5414,6 +5424,11 @@ int[] styleable BallPulseFooter { 0x7f0303a4, 0x7f0303a6, 0x7f0303d5 }
 int styleable BallPulseFooter_srlAnimatingColor 0
 int styleable BallPulseFooter_srlClassicsSpinnerStyle 1
 int styleable BallPulseFooter_srlNormalColor 2
+int[] styleable BannerView { 0x7f030168, 0x7f0304dd, 0x7f0304de, 0x7f0304df }
+int styleable BannerView_duration 0
+int styleable BannerView_indicatorNormalColor 1
+int styleable BannerView_indicatorSelectedColor 2
+int styleable BannerView_loop 3
 int[] styleable BaseProgressIndicator { 0x01010139, 0x7f0301e3, 0x7f030203, 0x7f0302da, 0x7f030383, 0x7f030385, 0x7f0304a6, 0x7f0304a9, 0x7f0304ae }
 int styleable BaseProgressIndicator_android_indeterminate 0
 int styleable BaseProgressIndicator_hideAnimationBehavior 1

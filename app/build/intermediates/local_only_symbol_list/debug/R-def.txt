@@ -1,6 +1,10 @@
 R_DEF: Internal format may change without notice
 local
+attr? duration
 attr? horizontal_space
+attr? indicatorNormalColor
+attr? indicatorSelectedColor
+attr? loop
 attr? vertical_space
 color back_grey
 color black
@@ -446,6 +450,8 @@ drawable shape_item_down_back
 drawable shape_tag
 drawable shape_tag_normal
 drawable shape_tag_selected
+id banner_view
+id banner_view_pager
 id base_layout
 id bottom_navigation
 id content_list
@@ -456,9 +462,11 @@ id flow_text_view
 id gratia_item
 id grid_layout
 id guideline2
+id guideline3
 id home_item
 id home_view_pager
 id include
+id iv
 id iv_delete
 id iv_goods_img
 id iv_scan
@@ -468,6 +476,7 @@ id layout_head
 id list
 id ly_network_error
 id my_loading_view
+id point_Layout
 id recommend_layout
 id refreshLayout
 id relativeLayout
@@ -498,6 +507,7 @@ id web_view
 layout activity_main
 layout activity_ticket
 layout base_layout
+layout custom_banner_view
 layout flow_text_view
 layout fragment_gratia
 layout fragment_gratia_base
@@ -512,6 +522,7 @@ layout fragment_selected_base
 layout include_home_view_pager_title
 layout item_gratia_content
 layout item_home_view_page_content
+layout item_pager
 layout view_content_empty
 layout view_loading
 layout view_net_err
@@ -538,6 +549,7 @@ string search_hint
 string selected
 string ticket
 style Theme.NewTaoBaoUnion
+styleable BannerView duration loop indicatorNormalColor indicatorSelectedColor
 styleable FlowTextLayoutStyle horizontal_space vertical_space
 xml backup_rules
 xml data_extraction_rules
